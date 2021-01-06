@@ -10,6 +10,7 @@ Italian translation of [Think DSP](https://github.com/AllenDowney/ThinkDSP) by A
 
 ## Tools used:
 * [OmegaT v.4.3.2](https://omegat.org)
+* [Dillinger](https://dillinger.io) - an online Markdown editor/viewer.
 
 ## ToDo
 * Translation maintenance.
@@ -35,3 +36,9 @@ Italian translation of [Think DSP](https://github.com/AllenDowney/ThinkDSP) by A
 * Il testo nelle immagini è (ancora) in inglese
 * C'è da rivedere/uniformare il termine "ampiezza" usato a volte per "larghezza" altre per "altezza o amplificazione". Talvolta è stato usato "magnitudine"
 
+##### OmegaT non consente di inserire tag Latex.
+Il file tradotto deve essere ulteriormente modificato:
+* Cercare e aggiustare "Errorissimo..."
+* Aggiustare "%timeit".
+* aggiustare le matrici "[[...."
+* Inserire la data automatica: \today
