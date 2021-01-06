@@ -17,10 +17,10 @@ Italian translation of [Think DSP](https://github.com/AllenDowney/ThinkDSP) by A
 
 
 ## Modifiche al testo originale:
-Alla versione del documento è stato aggiunta la data della traduzione italiana.
-Sono stati aggiunti dei pacchetti Latex per l'italiano.
-Cambiato il formato della pagina da Letter ad A4, e la relativa gabbia del testo.
-Aggiunta la mail del traduttore a quella dell'autore per le correzioni alla versione italiana.
+* Alla versione del documento è stato aggiunta la data della traduzione italiana.
+* Sono stati aggiunti dei pacchetti Latex per l'italiano.
+* Cambiato il formato della pagina da Letter ad A4, e la relativa gabbia del testo.
+* Aggiunta la mail del traduttore a quella dell'autore per le correzioni alla versione italiana.
 
 ## Note alla traduzione italiana
 * Per quanto possibile si è cercato di dare una veste più impersonale evitando il "tu" e l' "io".
