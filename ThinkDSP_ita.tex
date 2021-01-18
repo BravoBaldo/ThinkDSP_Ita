@@ -32,7 +32,7 @@
 
 \newcommand{\thetitle}{Think DSP} \newcommand{\thesubtitle}{Digital Signal Processing in Python} \newcommand{\theversion}{1.1.2
 
-(Trad. Ita: 6 gennaio 2021)}
+(Trad. Ita: 18 gennaio 2021)}
 
 % these styles get translated in CSS for the HTML version
 \newstyle{a:link}{color:black;} \newstyle{p+p}{margin-top:1em;margin-bottom:1em} \newstyle{img}{border:0px} 
@@ -167,21 +167,21 @@ Copyright 2014 Allen B. Downey
 % END OF THE PART WE SKIP FOR PLASTEX
 \chapter{Prefazione} \label{preface} 
 
-L'elaborazione dei segnali, il Signal Processing, è uno dei miei argomenti favoriti. È utile in molte aree della scienza e dell'ingegneria e, se si comprendono le idee fondamentali, fornisce informazioni su molte cose che vediamo nel mondo e soprattutto sulle cose che ascoltiamo.
+L'elaborazione dei segnali, il Signal Processing, è uno dei miei argomenti favoriti. È utile in molte aree della scienza e dell'ingegneria e, se si comprendono le idee fondamentali, fornisce informazioni su molte cose che vediamo nel mondo, e soprattutto sulle cose che ascoltiamo.
 
-Ma a meno che si abbiano alle spalle studi di ingegneria elettronica o meccanica, probabilmente non si c'è stata la possibilità di apprendere l'elaborazione dei segnali. Il problema è che la maggior parte dei libri (e i docenti che li usano) presentano il materiale dal basso verso l'alto, a partire da astrazioni matematiche come i fasori. Tendono, quindi, ad essere teorici, con poche applicazioni e poca rilevanza apparente.
+Ma a meno che non si abbiano alle spalle studi di ingegneria elettronica o meccanica, probabilmente non si c'è stata la possibilità di apprendere l'elaborazione dei segnali. Il problema è che la maggior parte dei libri (e i docenti che li usano) presentano il materiale dal basso verso l'alto, a partire da astrazioni matematiche come i fasori. Tendono, quindi, ad essere teorici, con poche applicazioni e poca rilevanza apparente.
 
-La premessa di questo libro è che se si sa programmare, si può usare quell'abilità per imparare altre cose e divertendosi nel farlo.
+La premessa di questo libro è che se si sa programmare, si può usare tale abilità per imparare altre cose, divertendosi nel farlo.
 
-Con un approccio basato sulla programmazione, si possono presentare subito le idee più importanti. Entro la fine del primo capitolo, è possibile analizzare le registrazioni audio e altri segnali e generare nuovi suoni. Ogni capitolo introduce una nuova tecnica e un'applicazione che applicabile a segnali reali. Ad ogni passaggio si impara prima come usare una tecnica e poi come funziona.
+Con un approccio basato sulla programmazione, si possono presentare subito le idee più importanti. Entro la fine del primo capitolo, è possibile analizzare le registrazioni audio e altri segnali e generare nuovi suoni. Ogni capitolo introduce una nuova tecnica e un'applicazione a segnali reali. Ad ogni passaggio si impara prima come usare una tecnica e poi come funziona.
 
-Questo approccio è più pratico e, spero che sarete d'accordo, più divertente.
+Tale approccio è più pratico e, spero che sarete d'accordo, più divertente.
 
 \section{Per chi è questo libro?} 
 
-Gli esempi e il codice a supporto per questo libro sono in Python. Si dovrebbero conoscere le basi di Python e avere familiarità con le funzionalità dell'object-oriented, almeno saper usare gli oggetti se proprio crearne dei propri.
+Gli esempi e il codice a supporto per questo libro sono in Python. Si dovrebbero conoscere le basi di Python e avere familiarità con le funzionalità dell'object-oriented, almeno saper usare gli oggetti se non crearne dei propri.
 
-Se non si ha già una familiarità con Python, si potrebbe iniziare con l'altro mio altro libro, {\it Think Python}, che è un'introduzione a Python per le persone che non hanno mai programmato, oppure con {\it Learning Python} di Mark Lutz, che potrebbe risultare migliore per chi ha già una certa esperienza con la programmazione.
+Se non si ha già una certa familiarità con Python, si potrebbe iniziare con l'altro mio altro libro, {\it Think Python}, che è un'introduzione a Python per chi non ha mai programmato, oppure con {\it Learning Python} di Mark Lutz, che potrebbe risultare migliore per chi ha già una certa esperienza con la programmazione.
 
 Io uso tantissimo NumPy e SciPy. Se si conoscono già, è fantastico, ma spiegherò anche le funzioni e le strutture dati utilizzate.
 
@@ -195,17 +195,17 @@ La home page di GitHub per il mio repository offre diversi modi per lavorare con
 
 \begin{itemize} 
 
-\item Si può creare una copia del repository su GitHub premendo il pulsante {\sf Fork}. Se non si ha già un account GitHub, se ne dovrà creare uno. Dopo il fork, si avrà il proprio repository su GitHub che utilizzabile per tenere traccia del codice che si scrive mentre si lavora con questo libro. Poi si può clonare il repository, il che significa che si copiano i file sul proprio computer. \index{fork} 
+\item Si può creare una copia del repository su GitHub premendo il pulsante {\sf Fork}. Se non si ha già un account GitHub, se ne dovrà creare uno. Dopo il fork, si avrà il proprio repository su GitHub, utilizzabile per tenere traccia del codice che si scrive mentre si lavora con questo libro. Poi si può clonare il repository, il che significa che si copiano i file sul proprio computer. \index{fork} 
 
 \item Oppure si potrebbe clonare il mio repository. Non è necessario un account GitHub per farlo, ma non si sarà in grado di aggiornare le modifiche su GitHub. \index{clone} 
 
-\item Se non si desidera utilizzare Git, si possono scaricare il tutto in un file Zip utilizzando il pulsante nell'angolo in basso a destra della pagina di GitHub.
+\item Se non si desidera utilizzare Git, si può scaricare il tutto in un file Zip utilizzando il pulsante nell'angolo in basso a destra della pagina di GitHub.
 
 \end{itemize} 
 
 Tutto il codice è scritto per funzionare sia in Python 2 che in Python 3 senza modifiche.
 
-Ho sviluppato questo libro utilizzando Anaconda dalla Continuum Analytics, una distribuzione Python gratuita che include tutti i pacchetti necessari per eseguire il codice (e molto altro). Ho trovato Anaconda facile da installare. Per default, esegue un'installazione a livello di utente, non a livello di sistema, quindi non sono necessari privilegi di amministratore. Supporta sia Python 2 che Python 3. Anaconda si può scaricare da \url{https://www.anaconda.com/distribution/}. \index{Anaconda} 
+Questo libro è stato sviluppato utilizzando Anaconda della Continuum Analytics, una distribuzione Python gratuita che include tutti i pacchetti necessari per eseguire il codice (e molto altro). Ho trovato Anaconda facile da installare. Per default, esegue un'installazione a livello di utente, non a livello di sistema, quindi non sono necessari i privilegi di amministratore. Supporta sia Python 2 che Python 3. Anaconda si può scaricare da \url{https://www.anaconda.com/distribution/}. \index{Anaconda} 
 
 Se non si vuol usare Anaconda, saranno necessari i seguenti pacchetti:
 
@@ -229,7 +229,7 @@ Esistono tre modi per lavorare con i notebook Jupyter:
 
 \item[Eseguire Jupyter sul proprio computer]
 
-Se si è installato Anaconda, probabilmente si ha Jupyter per default. Per verificare, avviare il server dalla riga di comando, in questo modo:
+Se si è installato Anaconda, probabilmente si ha Jupyter per default. Per verificarlo, avviare il server dalla riga di comando, in questo modo:
 
 \begin{verbatim} 
 $ jupyter notebook
@@ -241,7 +241,7 @@ Se non lo è già, lo si può installare in Anaconda in questo modo:
 $ conda install jupyter
  \end{verbatim} 
 
-Quando si avvia il server, questo dovrebbe avviare il browser Web predefinito o creare una nuova scheda in una finestra se il browser è aperto.
+Quando si avvia il server, questo dovrebbe avviare il browser Web predefinito o, se il browser è già aperto, creare una nuova scheda.
 
 \item[Eseguire Jupyter su Binder]
 
@@ -251,7 +251,7 @@ Gli script si possono eseguire e modificare per eseguire il proprio codice, ma l
 
 \item[Visualizzare i notebook su nbviewer]
 
-Quando ci riferiremo ai notebook più avanti nel libro, forniremo dei link a nbviewer, che propone una vista statica del codice e dei risultati. È possibile utilizzare tali link per leggere i notebook e ascoltare gli esempi, ma non sarà possibile modificare o eseguire il codice o utilizzare i widget interattivi.
+Quando ci riferiremo ai notebook, più avanti nel libro, forniremo dei link a nbviewer, che propone una vista statica del codice e dei risultati. È possibile utilizzare tali link per leggere i notebook e ascoltare gli esempi, ma non sarà possibile modificare o eseguire il codice né utilizzare i widget interattivi.
 
 \end{description} 
 
@@ -332,7 +332,7 @@ Un {\bf segnale} rappresenta una quantità che varia nel tempo. Questa definizio
 
 Un microfono è un dispositivo che misura queste variazioni e genera un segnale elettrico che rappresenta il suono. Un altoparlante è un dispositivo che riceve un segnale elettrico e produce un suono. Microfoni e altoparlanti sono detti {\bf trasduttori} perché trasducono, o convertono, i segnali da una forma all'altra.
 
-Questo libro tratta dell'elaborazione dei segnali, che comprende i processi per sintetizzare, trasformare e analizzare i segnali. Mi concentrerò sui segnali sonori, ma gli stessi metodi si applicano ai segnali elettronici, alle vibrazioni meccaniche e ai segnali in molti altri domini.
+Questo libro tratta dell'elaborazione dei segnali, che comprende i processi per sintetizzare, trasformare e analizzare i segnali. Ci si concentrerà sui segnali sonori, ma gli stessi metodi si applicano ai segnali elettronici, alle vibrazioni meccaniche e ai segnali in molti altri domini.
 
 Si applicano anche ai segnali che variano nello spazio piuttosto che nel tempo, come la salita lungo un sentiero escursionistico. E si applicano a segnali in più di una dimensione, come un'immagine, che si può pensare come a un segnale che varia nello spazio bidimensionale. O a un film, che è un segnale che varia nello spazio bidimensionale {\it e} nel tempo.
 
@@ -351,11 +351,11 @@ Inizieremo con i {\bf segnali periodici}, questi sono segnali che si ripetono do
 
 Questo segnale assomiglia a una {\bf sinusoide}, il che significa che ha la stessa forma della funzione trigonometrica seno.
 
-Si può vedere che questo segnale è periodico. Ho scelto la durata in modo da mostrare tre ripetizioni complete, note anche come {\bf cicli}. La durata di ogni ciclo, detto {\bf periodo}, è di circa 2.3 ms.
+Si può vedere che questo segnale è periodico. La durata è stata scelta in modo da mostrare tre ripetizioni complete, note anche come {\bf cicli}. La durata di ogni ciclo, detto {\bf periodo}, è di circa 2.3 ms.
 
 La {\bf frequenza} di un segnale è il numero di cicli al secondo, che è l'inverso del periodo. Le unità di frequenza sono i cicli al secondo, o {\bf Hertz}, abbreviato con ``Hz''. (A rigor di termini, il numero di cicli è un numero adimensionale, quindi un Hertz è davvero un ``al secondo'').
 
-La frequenza di questo segnale è di circa 439 Hz, leggermente inferiore a 440 Hz, che è il tono di accordatura standard per la musica orchestrale. Il nome musicale di questa nota è A (it:LA), o più esattamente, A4 (it:LA3 ovvero il LA della quarta ottava del pianoforte). Se non si ha familiarità con la ``scientific pitch notation'', il suffisso numerico indica in quale ottava si trova la nota. A4 è la A sopra la C (it:DO) centrale. A5 è un'ottava più alta. Vedere \url{http://en.wikipedia.org/wiki/Scientific_pitch_notation}.
+La frequenza di questo segnale è di circa 439 Hz, leggermente inferiore a 440 Hz, che è il tono di accordatura standard per la musica orchestrale. Il nome musicale di questa nota è A (it:LA), o più esattamente, A4 (it: LA della quarta ottava del pianoforte). Se non si ha familiarità con la ``scientific pitch notation'', il suffisso numerico indica in quale ottava si trova la nota. A4 è la A sopra la C (it:DO) centrale. A5 è un'ottava più alta. Vedere \url{http://en.wikipedia.org/wiki/Scientific_pitch_notation}.
 
 \begin{figure} 
 
@@ -409,7 +409,7 @@ Date le armoniche e le loro ampiezze, è possibile ricostruire il segnale somman
 
 \section{Segnali} 
 
-Ho scritto un modulo Python chiamato {\tt thinkdsp.py} che contiene classi e funzioni per lavorare con segnali e spettri\footnote{Il plurale inglese di ``spectrum'' è spesso scritto ``spectra'', ma si preferisce usare il plurale standard inglese. Se si è abituati a ``spectra'', si spera che questa scelta non risulti troppo strana (ndt: Nella versione inglese).}. Lo si troverà nel repository di questo libro (vedere la Sezione \ref{code}).
+Ho scritto un modulo Python chiamato {\tt thinkdsp.py} che contiene classi e funzioni per lavorare con segnali e spettri\footnote{[Nota per la versione inglese] Il plurale inglese di ``spectrum'' è spesso scritto ``spectra'', ma si preferisce usare il plurale standard inglese. Se si è abituati a ``spectra'', si spera che questa scelta non risulti troppo strana (ndt: Nella versione inglese).}. Lo si troverà nel repository di questo libro (vedere la Sezione \ref{code}).
 
 Per rappresentare i segnali, {\tt thinkdsp} fornisce una classe chiamata {\tt Signal}, che è la classe genitore per diversi tipi di segnali, tra cui {\tt Sinusoid}, che rappresenta sia i segnali seno che coseno.
 
@@ -446,7 +446,7 @@ Una Wave rappresenta un segnale valutato in una sequenza di punti nel tempo. Ogn
 
 {\tt duration} è la lunghezza di Wave in secondi. {\tt start} è il tempo di inizio, anch'esso in secondi. {\tt framerate} è il numero (intero) di frame al secondo, che è anche il numero di campioni al secondo.
 
-11,025 frame al secondo è uno dei numerosi framerate comunemente utilizzati nei formati di file audio, tra cui Waveform Audio File (WAV) e mp3.
+11,025 frame al secondo è uno dei numerosi framerate comunemente utilizzati nei formati dei file audio, tra cui Waveform Audio File (WAV) e mp3.
 
 Questo esempio valuta il segnale da {\tt t=0} a {\tt t=0.5} con 5,513 frame equidistanti (perché 5,513 è la metà di 11,025). Il tempo tra i frame, o {\bf timestep}, è di {\tt 1/11025} secondi, circa 91 $\mu$s.
 
@@ -575,7 +575,7 @@ wave.scale(2)
 wave.shift(1)
  \end{verbatim} 
 
-La documentazione di questi due metodi e di altri è disponibile su \url{http://greenteapress.com/thinkdsp.html}.
+La documentazione di questi due metodi, e di altri, è disponibile su \url{http://greenteapress.com/thinkdsp.html}.
 
 \section{Oggetti Signal} \label{sigobs} 
 
@@ -602,7 +602,7 @@ I parametri di \verb"__init__" sono:
 
 \item {\tt amp}: ampiezza. Le unità dell'ampiezza sono arbitrarie, solitamente scelte in modo che 1.0 corrisponda all'ingresso massimo da un microfono o all'uscita massima verso un altoparlante.
 
-\item {\tt offset}: indica dove, nel suo periodo, inizia il segnale; {\tt offset} l'unità è in radianti, per i motivi che verranno spiegati in seguito.
+\item {\tt offset}: indica dove, nel suo periodo, inizia il segnale; l'unità {\tt offset} è in radianti, per i motivi che verranno spiegati in seguito.
 
 \item {\tt func}: una funzione Python usata per valutare il segnale in un particolare momento. Di solito è {\tt np.sin} oppure {\tt np.cos}, producendo un segnale seno o coseno.
 
@@ -620,7 +620,7 @@ Signal fornisce \verb"make_wave", che assomiglia a questo:
         return Wave(ys, ts, framerate=framerate)
  \end{verbatim} 
 
-{\tt start} e {\tt duration} è il tempo di inizio e la durata in secondi. {\tt framerate} è il numero di frame (campioni) al secondo.
+{\tt start} e {\tt duration} sono il tempo di inizio e la durata in secondi. {\tt framerate} è il numero di frame (campioni) al secondo.
 
 {\tt n} è il numero di campioni, e {\tt ts} è un array NumPy di tempi di campionamento.
 
@@ -677,7 +677,7 @@ Usare \verb"high_pass", \verb"low_pass" e \verb"band_stop" per filtrare (elimina
 
 In questo capitolo vengono presentate diverse nuove forme d'onda; guarderemo i loro spettri per capire la loro {\bf struttura armonica}, che è l'insieme di sinusoidi di cui sono costituiti.
 
-Verrà introdotto anche uno dei fenomeni più importanti nell'elaborazione del segnale digitale: l'aliasing. E si spiegherà un po' di più di come funziona la classe Spectrum.
+Verrà introdotto anche uno dei fenomeni più importanti nell'elaborazione del segnale digitale: l'aliasing. E si spiegherà un po' di più su come funziona la classe Spectrum.
 
 Il codice per questo capitolo si trova in {\tt chap02.ipynb}, nel repository di questo libro (vedere la Sezione~\ref{code}). Lo si può anche visualizzare su \url{http://tinyurl.com/thinkdsp02}.
 
@@ -690,7 +690,7 @@ Una sinusoide contiene una sola componente di frequenza, quindi il suo spettro h
 % aliasing.py
 \centerline{\includegraphics[height=2.5in]{figs/triangle-200-1.pdf}} \caption{Segmento di un segnale triangolare a 200 Hz.} \label{fig.triangle.200.1} \end{figure} 
 
-Si inizierà con una forma d'onda triangolare, che è come una versione in linea retta di una sinusoide. La Figura~\ref{fig.triangle.200.1} mostra una forma d'onda triangolare con una frequenza di 200 Hz.
+Si inizierà con una forma d'onda triangolare, che è come una versione con segmenti rettilinei di una sinusoide. La Figura~\ref{fig.triangle.200.1} mostra una forma d'onda triangolare con una frequenza di 200 Hz.
 
 Per generare un'onda triangolare, si può usare {\tt thinkdsp.TriangleSignal}:
 
@@ -733,7 +733,7 @@ signal.plot()
 % aliasing.py
 \centerline{\includegraphics[height=2.5in]{figs/triangle-200-2.pdf}} \caption{Lo spettro di un segnale triangolare a 200 Hz, mostrato su due scale verticali. La versione a destra taglia via la fondamentale per mostrare più chiaramente le armoniche.} \label{fig.triangle.200.2} \end{figure} 
 
-Poi possiamo usare il segnale per creare una Wave e usarla per creare uno Spectrum:
+Poi possiamo usare il segnale per creare una Wave per poi creare uno Spectrum:
 
 \begin{verbatim} 
 wave = signal.make_wave(duration=0.5, framerate=10000)
@@ -741,9 +741,9 @@ spectrum = wave.make_spectrum()
 spectrum.plot()
  \end{verbatim} 
 
-La Figura~\ref{fig.triangle.200.2} mostra due visualizzazioni del risultato; la vista a destra viene ridimensionata per mostrare più chiaramente le armoniche. Come previsto, il picco più alto è alla frequenza fondamentale, 200 Hz, e ci sono picchi aggiuntivi alle frequenze delle armoniche, che sono multipli interi di 200.
+La Figura~\ref{fig.triangle.200.2} mostra due videate del risultato; quella a destra viene ridimensionata per mostrare più chiaramente le armoniche. Come previsto, il picco più alto è alla frequenza fondamentale, 200 Hz e ci sono picchi aggiuntivi alle frequenze delle armoniche, che sono multipli interi di 200.
 
-Ma una sorpresa è che non ci sono picchi ai multipli pari: 400, 800, ecc. Le armoniche di un'onda triangolare sono tutte multipli dispari della frequenza fondamentale, in questo esempio 600, 1000, 1400, ecc.
+Ma una sorpresa è che non ci sono picchi ai multipli pari: 400, 800, ecc. Le armoniche di un'onda triangolare sono tutte multiple dispari della frequenza fondamentale, in questo esempio 600, 1000, 1400, ecc.
 
 Un'altra caratteristica di questo spettro è la relazione tra l'ampiezza e la frequenza delle armoniche. La loro ampiezza diminuisce in proporzione al quadrato della frequenza. Ad esempio, il rapporto di frequenza delle prime due armoniche (200 e 600 Hz) è 3 e il rapporto di ampiezza è di circa 9. Il rapporto di frequenza delle due armoniche successive (600 e 1000 Hz) è 1.7 e il rapporto di ampiezza è di circa $1.7^2 = 2.9$. Questa relazione è detta {\bf struttura armonica}.
 
@@ -792,13 +792,13 @@ Gli esercizi alla fine di questo capitolo danno la possibilità di esplorare alt
 
 C'è una confessione. Gli esempi, nella sezione precedente, sono stati scelti appositamente per evitare di mostrare qualcosa di confuso. Ma ora è il momento di confondersi.
 
-La Figura~\ref{fig.triangle.1100.2} mostra lo spettro di un'onda triangolare a 1100 Hz, campionato a 10,000 frame al secondo. Di nuovo, la vista a destra viene ridimensionata per mostrare le armoniche.
+La Figura~\ref{fig.triangle.1100.2} mostra lo spettro di un'onda triangolare a 1100 Hz, campionata a 10,000 frame al secondo. Di nuovo, la vista a destra viene ridimensionata per mostrare le armoniche.
 
 Le armoniche di quest'onda dovrebbero essere a 3300, 5500, 7700 e 9900 Hz. Nella figura, ci sono picchi a 1100 e 3300 Hz, come previsto, ma il terzo picco è a 4500, non a 5500 Hz. Il quarto picco è a 2300, non a 7700 Hz. E se si guarda da vicino, il picco che dovrebbe essere a 9900 è in realtà a 100 Hz. Cosa succede?
 
 Il problema è che quando si valuta il segnale in punti discreti nel tempo, si perdono informazioni su ciò che è accaduto tra i campioni. Per le componenti a bassa frequenza, questo non è un problema, perché si hanno molti campioni per ciascun periodo.
 
-Ma se si campiona un segnale a 5000 Hz con 10,000 frame al secondo, si hanno solo due campioni per periodo. Questo risulta essere sufficiente, appena appena, ma se la frequenza è più alta, non lo è.
+Ma se si campiona un segnale a 5000 Hz con 10,000 frame al secondo, si hanno solo due campioni per periodo. Questo risulta essere appena sufficiente, ma se la frequenza è più alta, non lo è più.
 
 Per capire perché, generiamo segnali coseno a 4500 e 5500 Hz e campioniamoli a 10,000 frame al secondo:
 
@@ -820,15 +820,15 @@ Per capire perché, generiamo segnali coseno a 4500 e 5500 Hz e campioniamoli a 
 % aliasing.py
 \centerline{\includegraphics[height=3.5in]{figs/aliasing1.pdf}} \caption{Segnali coseno a 4500 e 5500 Hz, campionati a 10,000 frame al secondo. I segnali sono diversi, ma i campioni sono identici.} \label{fig.aliasing1} \end{figure} 
 
-La Figura~\ref{fig.aliasing1} mostra il risultato. Ho disegnato i segnali con sottili linee grigie e i campioni con delle linee verticali, per facilitare il confronto delle due onde. Il problema dovrebbe essere chiaro: anche se i segnali sono diversi, le onde sono identiche!
+La Figura~\ref{fig.aliasing1} mostra il risultato. I segnali sono stati disegnati con sottili linee grigie e i campioni con delle linee verticali, per facilitare il confronto delle due onde. Il problema dovrebbe essere chiaro: anche se i segnali sono diversi, le onde sono identiche!
 
-Quando si campiona un segnale a 5500 Hz a 10,000 frame al secondo, il risultato è indistinguibile da un segnale a 4500 Hz. Per lo stesso motivo, un segnale di 7700 Hz è indistinguibile da quello a 2300 Hz e un segnale di 9900 Hz è indistinguibile da quello di 100 Hz.
+Quando si campiona un segnale di 5500 Hz a 10,000 frame al secondo, il risultato è indistinguibile da un segnale di 4500 Hz. Per lo stesso motivo, un segnale di 7700 Hz è indistinguibile da quello a 2300 Hz e un segnale di 9900 Hz è indistinguibile da quello di 100 Hz.
 
-Questo effetto è chiamato {\bf aliasing} perché quando viene campionato il segnale ad alta frequenza, sembra essere un segnale a bassa frequenza.
+Questo effetto è chiamato {\bf aliasing} [copia] perché quando viene campionato il segnale ad alta frequenza, sembra essere un segnale a bassa frequenza.
 
 In questo esempio, la frequenza più alta che possiamo misurare è 5000 Hz, che è la metà della frequenza di campionamento. Le frequenze superiori a 5000 Hz vengono ripiegate sotto i 5000 Hz, motivo per cui questa soglia viene talvolta chiamata ``folding frequency'' [frequenza di ripiegamento]. A volte è anche detta {\bf frequenza di Nyquist}. Vedere \url{http://en.wikipedia.org/wiki/Nyquist_frequency}.
 
-Lo schema del ripiegamento continua se la frequenza con aliasing scende sotto lo zero. Ad esempio, la 5a armonica dell'onda triangolare a 1100 Hz è a 12,100 Hz. Ripiegata a 5000 Hz, apparirebbe a -2100 Hz, ma viene ripiegata di nuovo a 0 Hz, e ancora a 2100 Hz. In effetti, si può vedere un piccolo picco a 2100 Hz nella Figura \ref{fig.square.100.2}, e il successivo a 4300 Hz.
+Lo schema del ripiegamento continua se la frequenza con aliasing scende sotto lo zero. Ad esempio, la 5a armonica dell'onda triangolare di 1100 Hz è a 12,100 Hz. Ripiegata a 5000 Hz, apparirebbe a -2100 Hz, ma viene ripiegata di nuovo a 0 Hz, e ancora a 2100 Hz. In effetti, si può vedere un piccolo picco a 2100 Hz nella Figura \ref{fig.square.100.2}, e il successivo a 4300 Hz.
 
 \section{Calcolo dello spettro} 
 
@@ -871,7 +871,7 @@ Ogni valore in {\tt hs} corrisponde a una componente di frequenza: la sua grande
 
 La classe Spectrum fornisce due proprietà a sola lettura, {\tt amps} e {\tt angles}, che restituiscono array NumPy che rappresentano le ampiezze e gli angoli di {\tt hs}. Quando si disegna un oggetto Spectrum, di solito si disegna {\tt amps} rispetto a {\tt fs}. A volte è anche utile disegnare {\tt angles} rispetto a {\tt fs}.
 
-Anche se si potrebbe essere tentati di guardare le parti reali e immaginarie di {\tt hs}, non se ne avrà quasi mai bisogno. Vi incoraggio a pensare al DFT come a un vettore di ampiezze e sfasamenti che sono codificati sotto forma di numeri complessi.
+Anche se si potrebbe essere tentati di guardare le parti reali e immaginarie di {\tt hs}, non se ne avrà quasi mai bisogno. Si incoraggia a pensare al DFT come a un vettore di ampiezze e sfasamenti che sono codificati sotto forma di numeri complessi.
 
 Per modificare uno spettro, è possibile accedere direttamente ad {\tt hs}. Per esempio:
 
@@ -882,14 +882,14 @@ spectrum.hs[spectrum.fs > cutoff] = 0
 
 La prima riga moltiplica gli elementi di {\tt hs} per 2, il che raddoppia le ampiezze di tutte le componenti. La seconda riga imposta a 0 solo gli elementi di {\tt hs} dove la frequenza corrispondente supera una certa frequenza di taglio.
 
-Ma Spectrum fornisce anche i metodi per eseguire queste operazioni:
+Ma Spectrum fornisce anche dei metodi per eseguire queste operazioni:
 
 \begin{verbatim} 
 spectrum.scale(2)
 spectrum.low_pass(cutoff)
  \end{verbatim} 
 
-La documentazione di questi due metodi e di altri è disponibile su \url{http://greenteapress.com/thinkdsp.html}.
+La documentazione di questi due metodi, e di altri, è disponibile su \url{http://greenteapress.com/thinkdsp.html}.
 
 A questo punto si dovrebbe avere un'idea migliore di come funzionano le classi Signal, Wave e Spectrum, ma non è stato spiegato come funziona la Fast Fourier Transform. Questo richiederà alcuni capitoli in più.
 
@@ -905,7 +905,7 @@ Scrivere una classe chiamata {\tt SawtoothSignal} che estenda {\tt Signal} e for
 
 Calcolare lo spettro di un'onda a dente di sega. Come si confronta la struttura armonica con le onde triangolari e quadrate? \end{exercise} 
 
-\begin{exercise} Creare un segnale quadrato a 1100 Hz e crea un'onda che lo campiona a 10000 frame al secondo. Se si disegna lo spettro, si può vedere che la maggior parte delle armoniche ha un alias. Quando si ascolta l'onda, si riescono a sentire le armoniche con alias? \end{exercise} 
+\begin{exercise} Creare un segnale quadrato a 1100 Hz e creare un'onda che lo campiona a 10000 frame al secondo. Se si disegna lo spettro, si può vedere che la maggior parte delle armoniche ha un alias. Quando si ascolta l'onda, si riescono a sentire le armoniche con alias? \end{exercise} 
 
 \begin{exercise} Se si ha un oggetto spettro, {\tt spectrum}, e se ne stampano i primi valori di {\tt spectrum.fs}, si vedrà che iniziano da zero. Quindi {\tt spectrum.hs[0]} è l'ampiezza della componente con frequenza 0. Ma cosa significa?
 
@@ -994,7 +994,7 @@ Ecco la funzione che valuta il segnale:
         return ys
  \end{verbatim} 
 
-{\tt ts} è la sequenza di punti nel tempo in cui il segnale dovrebbe essere valutato; semplificare questa funzione, si suppone che siano equidistanti.
+{\tt ts} è la sequenza di punti nel tempo in cui il segnale dovrebbe essere valutato; per semplificare questa funzione, si suppone che siano equidistanti.
 
 Per calcolare la frequenza in ogni momento, si utilizza {\tt np.linspace}, che restituisce un array NumPy di $n$ valori compresi tra {\tt start} e {\tt end}.
 
@@ -1135,7 +1135,7 @@ Tuttavia, si noti che il picco in ciascuna colonna è sfocato su 2-3 celle. Ques
 
 La {\bf risoluzione temporale} dello spettrogramma è la durata dei segmenti, che corrisponde alla larghezza delle celle nello spettrogramma. Poiché ogni segmento è 512 frame e ci sono 11,025 frame al secondo, la durata di ogni segmento è di circa 0,046 secondi.
 
-La {\bf risoluzione in frequenza} è l'intervallo di frequenza tra gli elementi nello spettro, che corrisponde all'altezza delle celle. Con 512 fotogrammi, otteniamo 256 componenti di frequenza in un intervallo da 0 a 5512.5 Hz, quindi l'intervallo tra le componenti è 21.6 Hz.
+La {\bf risoluzione in frequenza} è l'intervallo di frequenza tra gli elementi nello spettro, che corrisponde all'altezza delle celle. Con 512 frame, otteniamo 256 componenti di frequenza in un intervallo da 0 a 5512.5 Hz, quindi l'intervallo tra le componenti è 21.6 Hz.
 
 Più in generale, se $n$ è la lunghezza del segmento, lo spettro contiene $n/2$ componenti. Se il framerate è $r$, la frequenza massima nello spettro è $r/2$. Quindi la risoluzione temporale è $n/r$ e la risoluzione in frequenza è:
 
@@ -1162,7 +1162,7 @@ Per spiegare come funziona \verb"make_spectrogram", si deve spiegare il windowin
 
 La Trasformata Discreta di Fourier (DFT), utilizzata per calcolare gli spettri, tratta le onde come se fossero periodiche; cioè, assume che il segmento finito su cui opera sia un periodo completo di un segnale infinito che si ripete nel tempo. Nella pratica, questa ipotesi è spesso falsa, il che crea problemi.
 
-Un problema comune è la discontinuità all'inizio e alla fine del segmento. Poiché la DFT presume che il segnale sia periodico, collega implicitamente la fine del segmento al suo inizio per creare un loop. Se la fine non si connette agevolmente all'inizio, la discontinuità crea componenti di frequenza aggiuntivi nel segmento che non esistono nel segnale.
+Un problema comune è la discontinuità all'inizio e alla fine del segmento. Poiché la DFT presume che il segnale sia periodico, collega implicitamente la fine del segmento al suo inizio per creare un loop [ciclo continuo]. Se la fine non si connette agevolmente all'inizio, la discontinuità crea componenti di frequenza aggiuntive nel segmento che non esistono nel segnale.
 
 Ad esempio, iniziamo con un segnale sinusoidale che contiene solo una componente di frequenza a 440 Hz.
 
@@ -1182,7 +1182,7 @@ La Figura~\ref{fig.windowing1} (a sinistra) mostra il risultato. Come previsto, 
 
 Ma se la durata non è un multiplo del periodo, accadono cose strane. Con {\tt duration = signal.period * 30.25}, il segnale inizia da 0 e termina a 1.
 
-La figura ~\ref{fig.windowing1} (al centro) mostra lo spettro di questo segmento. Anche in questo caso, il picco è a 440 Hz, ma ora ci sono componenti aggiuntivi distribuiti da 240 a 640 Hz. Questa diffusione è chiamata {\bf leakage spettrale}, perché parte dell'energia che è effettivamente alla frequenza fondamentale fuoriesce in altre frequenze.
+La figura ~\ref{fig.windowing1} (al centro) mostra lo spettro di questo segmento. Anche in questo caso, il picco è a 440 Hz, ma ora ci sono componenti aggiuntive distribuite da 240 a 640 Hz. Questa diffusione è chiamata {\bf leakage spettrale} [perdita], perché parte dell'energia che è effettivamente alla frequenza fondamentale si disperde in altre frequenze.
 
 In questo esempio, la perdita si verifica perché stiamo utilizzando la DFT su un segmento che diventa discontinuo quando lo trattiamo come periodico.
 
@@ -1195,7 +1195,7 @@ In questo esempio, la perdita si verifica perché stiamo utilizzando la DFT su u
 
 Possiamo ridurre la dispersione [leakage] attenuando la discontinuità tra l'inizio e la fine del segmento, e un modo per farlo è il {\bf windowing} [suddivisione con finestre].
 
-Una ``window'' [finestra] è una funzione progettata per trasformare un segmento non periodico in qualcosa che può passare per periodico. La Figura~\ref{fig.windowing2} (in alto) mostra un segmento in cui la fine non si connette agevolmente all'inizio.
+Una ``window'' [finestra] è una funzione progettata per trasformare un segmento non periodico in qualcosa che possa passare per periodico. La Figura~\ref{fig.windowing2} (in alto) mostra un segmento in cui la fine non si connette agevolmente all'inizio.
 
 La Figura~\ref{fig.windowing2} (al centro) mostra una ``finestra di Hamming'', una delle funzioni di windowing più comuni. Nessuna funzione di windowing è perfetta, ma si può dimostrare che alcune sono ottimali per diverse applicazioni e la Hamming è una buona finestra per tutti gli usi.
 
@@ -1261,7 +1261,7 @@ Il parametro, {\tt self}, è un oggetto Wave. \verb"seg_length" è il numero di 
 
 \verb"spec_map" è un 'dictionary' che mappa da un timestamp a uno Spectrum.
 
-All'interno del ciclo while, si seleziona una fetta dall'onda e si applica la finestra; quindi si costruisce un oggetto Spectrum e lo si aggiunge a \verb"spec_map". Il tempo nominale di ogni segmento, {\tt t}, è il punto medio.
+All'interno del ciclo while, si seleziona una porzione dall'onda e si applica la finestra; quindi si costruisce un oggetto Spectrum e lo si aggiunge a \verb"spec_map". Il tempo nominale di ogni segmento, {\tt t}, è il punto medio.
 
 Poi si incrementano {\tt i} e {\tt j}, e si continua finché {\tt j} non va oltre la fine di Wave.
 
@@ -1294,17 +1294,17 @@ Suggerimento: combinare le funzioni di valutazione di {\tt Chirp} e {\tt Sawtoot
 
 Disegnare uno schizzo di come si pensa che sia lo spettrogramma di questo segnale, e disegnarlo. L'effetto dell'aliasing dovrebbe essere visivamente evidente e, se si ascolta attentamente, lo si può sentire. \end{exercise} 
 
-\begin{exercise} Creare un chirp a dente di sega che va da 2500 a 3000 Hz, e usalo per creare un'onda con durata 1 s e framerate 20 kHz. Disegnare uno schizzo di come si pensa che sarà lo spettro. Poi plottare lo spettro e vedere se si è capito bene. \end{exercise} 
+\begin{exercise} Creare un chirp a dente di sega che va da 2500 a 3000 Hz, e usarlo per creare un'onda con durata 1 s e framerate 20 kHz. Disegnare uno schizzo di come si pensa che sarà lo spettro. Poi plottare lo spettro e vedere se si è capito bene. \end{exercise} 
 
 \begin{exercise} Nella terminologia musicale, un ``glissando'' è una nota che scorre da un tono all'altro, quindi è simile a un chirp.
 
 Trovare o registrare un glissando e disegnare uno spettrogramma dei primi secondi. Un suggerimento: la {\it Rhapsody in Blue} di George Gershwin inizia con un famoso glissando per clarinetto, che si può scaricare da \url{http://archive.org/details/rhapblue11924}. \end{exercise} 
 
-\begin{exercise} Un suonatore di trombone può suonare un glissando estendendo il 'tiro' del trombone mentre soffia continuamente. Man mano che il 'tiro' si estende, la lunghezza totale del tubo si allunga e il passo risultante è inversamente proporzionale alla lunghezza.
+\begin{exercise} Un suonatore di trombone può suonare un glissando estendendo il 'tiro' del trombone soffiando continuamente. Man mano che il 'tiro' si estende, la lunghezza totale del tubo si allunga e il passo risultante è inversamente proporzionale alla lunghezza.
 
-Supponendo che il musicista il 'tiro' a una velocità costante, come varia la frequenza nel tempo?
+Supponendo che il musicista sposti il 'tiro' a una velocità costante, come varia la frequenza nel tempo?
 
-Scrivere una classe chiamata {\tt TromboneGliss} che estende {\tt Chirp} e fornisce {\tt evaluate}. Crea un'onda che simuli un glissando di trombone da C3 a F3 e di nuovo in C3. C3 è 262 Hz; F3 è 349 Hz.
+Scrivere una classe chiamata {\tt TromboneGliss} che estende {\tt Chirp} e fornisce {\tt evaluate}. Creare un'onda che simuli un glissando di trombone da C3 a F3 e di nuovo in C3. C3 è 262 Hz; F3 è 349 Hz.
 
 Disegnare uno spettrogramma dell'onda risultante. Un glissando di trombone è più simile a un chirp lineare o a uno esponenziale? \end{exercise} 
 
@@ -1316,9 +1316,9 @@ In inglese, ``noise'' [rumore] indica un suono indesiderato o sgradevole. Nel co
 
 \begin{enumerate} 
 
-\item Come in inglese, può significare un segnale indesiderato di qualsiasi tipo. Se due segnali interferiscono tra loro, ogni segnale considererebbe l'altro come rumore.
+\item Come in inglese, può significare un segnale indesiderato di qualsiasi tipo. Se due segnali interferiscono tra loro, ciascun segnale considererebbe l'altro come rumore.
 
-\item ``Rumore'' si riferisce anche a un segnale che contiene componenti a molte frequenze, quindi manca la struttura armonica dei segnali periodici che abbiamo visto nei capitoli precedenti.
+\item ``Rumore'' si riferisce anche a un segnale che contiene componenti a molte frequenze, quindi manca la struttura armonica dei segnali periodici vista nei capitoli precedenti.
 
 \end{enumerate} 
 
@@ -1372,7 +1372,7 @@ spectrum.plot_power()
 
 \verb"Spectrum.plot_power" è simile a \verb"Spectrum.plot", tranne per il fatto che disegna la potenza anziché l'ampiezza. La potenza è il quadrato dell'ampiezza. In questo capitolo si passa dall'ampiezza alla potenza perché è più convenzionale nel contesto del rumore.
 
-La Figura~\ref{fig.whitenoise1} mostra il risultato. Come il segnale, lo spettro sembra piuttosto casuale. In effetti, {\em è} casuale, ma dobbiamo essere più precisi sulla parola ``casuale''. Ci sono almeno tre cose che vorremmo sapere sul segnale di un rumore o sul suo spettro:
+La Figura~\ref{fig.whitenoise1} mostra il risultato. Come il segnale, lo spettro sembra piuttosto casuale. In effetti, {\em è} casuale, ma dobbiamo essere più precisi sulla parola ``casuale''. Ci sono almeno tre cose che vorremmo sapere sul segnale di un rumore e sul suo spettro:
 
 \begin{itemize} 
 
@@ -1466,7 +1466,7 @@ La Figura~\ref{fig.rednoise0} mostra il risultato. La forma d'onda vaga su e gi�
 % noise.py
 \centerline{\includegraphics[height=2.5in]{figs/rednoise3.pdf}} \caption{Spettro del rumore Browniano su scala lineare (a sinistra) e scala log-log (a destra).} \label{fig.rednoise3} \end{figure} 
 
-Se si disegna lo spettro del rumore Browniano su una scala lineare, come nella Figura~\ref{fig.rednoise3} (a sinistra), non sembra molto. Quasi tutta la potenza è alle frequenze più basse; le componenti a frequenza più alta non sono visibili.
+Se si disegna lo spettro del rumore Browniano su una scala lineare, come nella Figura~\ref{fig.rednoise3} (a sinistra), non di vede molto. Quasi tutta la potenza è alle frequenze più basse; le componenti a frequenza più alta non sono visibili.
 
 Per vedere più chiaramente la forma dello spettro, possiamo disegnare la potenza e la frequenza su una scala log-log. Ecco il codice:
 
@@ -1641,7 +1641,7 @@ Scaricare alcuni di questi file e calcolare lo spettro di ogni segnale. Lo spett
 
 \begin{exercise} Nel segnale di un rumore, il mix di frequenze cambia nel tempo. A lungo termine, ci si aspetta che la potenza a tutte le frequenze sia uguale, ma in ogni campione, la potenza a ciascuna frequenza è casuale.
 
-Per stimare la potenza media a lungo termine a ciascuna frequenza, possiamo suddividere un segnale lungo in segmenti, calcolare lo spettro di potenza per ogni segmento e quindi calcolare la media tra i segmenti. Si possono leggere ulteriori informazioni su questo algoritmo su \url{http://en.wikipedia.org/wiki/Bartlett's_method}.
+Per stimare la potenza media a lungo termine a ciascuna frequenza, possiamo suddividere un lungo segnale in segmenti, calcolare lo spettro di potenza per ogni segmento e quindi calcolare la media tra i segmenti. Si possono leggere ulteriori informazioni su questo algoritmo su \url{http://en.wikipedia.org/wiki/Bartlett's_method}.
 
 Implementare il metodo di Bartlett e usarlo per stimare lo spettro di potenza dell'onda di un rumore. Suggerimento: guardare l'implementazione di \verb"make_spectrogram". \end{exercise} 
 
@@ -1717,7 +1717,7 @@ Il risultato è una matrice di correlazione: il primo elemento è la correlazion
 % autocorr.py
 \centerline{\includegraphics[height=2.5in]{figs/autocorr2.pdf}} \caption{La correlazione di due onde sinusoidali in funzione dell'offset di fase tra di loro. Il risultato è un coseno.} \label{fig.autocorr2} \end{figure} 
 
-Gli elementi fuori diagonale contengono il valore che ci interessa, la correlazione di {\tt wave1} e {\tt wave2}. Il valore 0.54 indica che la forza della correlazione è moderata.
+Gli elementi esterni alla diagonale contengono il valore che ci interessa, la correlazione di {\tt wave1} e {\tt wave2}. Il valore 0.54 indica che la forza della correlazione è moderata.
 
 All'aumentare dell'offset della fase, questa correlazione diminuisce fino a quando le onde non sono sfasate di 180 gradi, il che produce una correlazione -1. Poi aumenta fino a quando l'offset differisce di 360 gradi. A quel punto abbiamo chiuso il cerchio e la correlazione è 1.
 
@@ -1755,7 +1755,7 @@ wave = signal.make_wave(duration=0.5, framerate=11025)
 serial_corr(wave)
  \end{verbatim} 
 
-Quando è stato eseguito questo esempio, si è ottenuto 0,006, che indica una correlazione seriale molto piccola. Si potrebbe ottenere un valore diverso quando si rieseguirà, ma dovrebbe essere relativamente piccolo.
+Quando è stato eseguito questo esempio, si è ottenuto 0,006, che indica una correlazione seriale molto piccola. Si potrebbe ottenere un valore diverso quando si rieseguirà, ma dovrebbe restare relativamente piccolo.
 
 Nel segnale di un rumore Browniano, ogni valore è la somma del valore precedente e un ``passo'' casuale, quindi ci si aspetta una forte correlazione seriale:
 
@@ -1791,7 +1791,7 @@ Nella sezione precedente abbiamo calcolato la correlazione tra ogni valore e il 
 % autocorr.py
 \centerline{\includegraphics[height=2.5in]{figs/autocorr4.pdf}} \caption{Funzioni di autocorrelazione per il rumore rosa con una gamma di parametri.} \label{fig.autocorr4} \end{figure} 
 
-Si può pensare a \verb"serial_corr" come una funzione che mappa da ciascun valore del ritardo [lag] alla correlazione corrispondente e possiamo valutare quella funzione scorrendo i valori di {\tt lag}:
+Si può pensare a \verb"serial_corr" come una funzione che mappa a ciascun valore del ritardo [lag] la correlazione corrispondente e possiamo valutare quella funzione scorrendo i valori di {\tt lag}:
 
 \begin{verbatim} 
 def autocorr(wave):
@@ -1802,7 +1802,7 @@ def autocorr(wave):
 
 {\tt autocorr} prende un oggetto Wave e restituisce la funzione di autocorrelazione come una coppia di sequenze: {\tt lags} è una sequenza di numeri interi da 0 a metà della lunghezza dell'onda; {\tt corrs} è la sequenza di correlazioni seriali per ogni ritardo.
 
-La Figura~\ref{fig.autocorr4} mostra le funzioni di autocorrelazione per il rumore rosa con tre valori di $\beta$. Per valori bassi di $\beta$, il segnale è meno correlato e la funzione di autocorrelazione scende rapidamente a zero. Per valori maggiori, la correlazione seriale è più forte e diminuisce più lentamente. Con $\beta=1.7$ la correlazione seriale è forte anche per lunghi ritardi; questo fenomeno è detta {\bf dipendenza a lungo raggio}, perché indica che ogni valore nel segnale dipende da molti valori precedenti.
+La Figura~\ref{fig.autocorr4} mostra le funzioni di autocorrelazione per il rumore rosa con tre valori di $\beta$. Per valori bassi di $\beta$, il segnale è meno correlato e la funzione di autocorrelazione scende rapidamente a zero. Per valori maggiori, la correlazione seriale è più forte e diminuisce più lentamente. Con $\beta=1.7$ la correlazione seriale è forte anche per lunghi ritardi; questo fenomeno è detto {\bf dipendenza a lungo raggio}, perché indica che ogni valore nel segnale dipende da molti valori precedenti.
 
 \section{Autocorrelazione dei segnali periodici} 
 
@@ -1820,7 +1820,7 @@ La Figura~\ref{fig.autocorr5} mostra lo spettrogramma di quest'onda. La frequenz
 \begin{figure} 
 
 % autocorr.py
-\centerline{\includegraphics[height=2.5in]{figs/autocorr6.pdf}} \caption{Spettro di un segmento da un chirp vocale.} \label{fig.autocorr6} \end{figure} 
+\centerline{\includegraphics[height=2.5in]{figs/autocorr6.pdf}} \caption{Spettro di un segmento di un chirp vocale.} \label{fig.autocorr6} \end{figure} 
 
 Per stimare il tono in un determinato momento, potremmo usare lo spettro, ma non funziona molto bene. Per vedere perché no, prenderemo un breve segmento dall'onda e se ne disegnerà lo spettro:
 
@@ -1840,7 +1840,7 @@ Possiamo stimare l'altezza in modo più preciso usando l'autocorrelazione. Se un
 \begin{figure} 
 
 % autocorr.py
-\centerline{\includegraphics[height=2.5in]{figs/autocorr7.pdf}} \caption{Due segmenti da un chirp, uno che inizia 0.0023 secondi dopo l'altro.} \label{fig.autocorr7} \end{figure} 
+\centerline{\includegraphics[height=2.5in]{figs/autocorr7.pdf}} \caption{Due segmenti di un chirp, uno che inizia 0.0023 secondi dopo l'altro.} \label{fig.autocorr7} \end{figure} 
 
 Per mostrare perché funziona, disegneremo due segmenti della stessa registrazione.
 
@@ -1885,7 +1885,7 @@ La Figura~\ref{fig.autocorr8} mostra la funzione di autocorrelazione per il segm
 
 La frequenza fondamentale stimata è 437 Hz. Per valutare la precisione della stima, possiamo eseguire lo stesso calcolo con i ritardi 100 e 102, che corrispondono alle frequenze 432 e 441 Hz. La precisione della frequenza utilizzando l'autocorrelazione è inferiore a 10 Hz, rispetto ai 100 Hz utilizzando lo spettro. In termini musicali, l'errore atteso è di circa 30 centesimi (un terzo di semitono).
 
-\section{Correlazione come prodotto scalare [dot product]} \label{dotproduct} 
+\section{Correlazione come prodotto scalare} \label{dotproduct} 
 
 Il capitolo è iniziato con questa definizione del coefficiente di correlazione di Pearson:
 
@@ -1895,7 +1895,7 @@ Il capitolo è iniziato con questa definizione del coefficiente di correlazione 
 %
 Poi si è usato $\rho$ per definire la correlazione seriale e l'autocorrelazione. Ciò è coerente con il modo in cui questi termini vengono utilizzati nelle statistiche, ma nel contesto dell'elaborazione del segnale, le definizioni sono leggermente diverse.
 
-Nell'elaborazione dei segnali, lavoriamo spesso con segnali non spostati [unbiased], dove la media è 0, e con segnali normalizzati, dove la deviazione standard è 1. In tal caso, la definizione di $\rho$ si semplifica in:
+Nell'elaborazione dei segnali, si lavora spesso con segnali non spostati [unbiased], dove la media è 0, e con segnali normalizzati, dove la deviazione standard è 1. In tal caso, la definizione di $\rho$ si semplifica in:
 
 %
 \[ \rho = \frac{1}{N} \sum_i x_i y_i \] 
@@ -1909,7 +1909,7 @@ Ed è normale semplificare ulteriormente:
 %
 Questa definizione di correlazione non è ``standardizzata'', quindi generalmente non è compresa tra -1 e 1. Ma ha altre proprietà utili.
 
-Se si pensa a $x$ e $y$ come vettori, si riconoscerà questa formula come il {\bf prodotto scalare}, $x \cdot y$. Vedere \url{http://en.wikipedia.org/wiki/Dot_product}.
+Se si pensa a $x$ e $y$ come vettori, si riconoscerà questa formula come il {\bf prodotto scalare}, $x \cdot y$. Vedere \url{https://it.wikipedia.org/wiki/Prodotto_scalare}.
 
 \newcommand{\norm}{\mathrm{norm}}
 
@@ -1928,7 +1928,7 @@ dove $\theta$ è l'angolo tra i vettori. E questo spiega perché la Figura~\ref{
 % autocorr.py
 \centerline{\includegraphics[height=2.5in]{figs/autocorr9.pdf}} \caption{Funzione di autocorrelazione calcolata con {\tt np.correlate}.} \label{fig.autocorr9} \end{figure} 
 
-NumPy fornisce una funzione, {\tt correlate}, che calcola la correlazione di due funzioni o l'autocorrelazione di una funzione. Possiamo usarlo per calcolare l'autocorrelazione del segmento dalla sezione precedente:
+NumPy fornisce una funzione, {\tt correlate}, che calcola la correlazione di due funzioni o l'autocorrelazione di una funzione. Possiamo usarla per calcolare l'autocorrelazione del segmento dalla sezione precedente:
 
 \begin{verbatim} 
 corrs2 = np.correlate(segment.ys, segment.ys, mode='same')
@@ -1960,7 +1960,7 @@ Infine, possiamo standardizzare i risultati in modo che la correlazione con {\tt
 
 Con queste correzioni, i risultati calcolati da {\tt autocorr} e {\tt np.correlate} sono quasi gli stessi. Differiscono ancora dell'1-2\%. Il motivo non è importante, ma per curiosità: {\tt autocorr} standardizza le correlazioni indipendentemente per ogni ritardo [lag]; per {\tt np.correlate}, li abbiamo standardizzati tutti alla fine.
 
-Fatto più importante, ora si sa cos'è l'autocorrelazione, come usarla per stimare il periodo fondamentale di un segnale e due modi per calcolarlo.
+Fatto più importante, ora si sa cos'è l'autocorrelazione, come usarla per stimare il periodo fondamentale di un segnale e due modi per calcolarla.
 
 \section{Esercizi} 
 
@@ -1982,9 +1982,9 @@ Vi Hart ha un ottimo video intitolato ``What is up with Noises? (The Science and
 
 \chapter{Trasformata discreta del coseno} \label{dct} 
 
-L'argomento di questo capitolo è la {\bf Trasformata Discreta del Coseno} (DCT), utilizzata in MP3 e formati simili per la compressione della musica; in JPEG e formati simili per le immagini; e la famiglia dei formati MPEG per i video.
+L'argomento di questo capitolo è la {\bf Trasformata Discreta del Coseno} (DCT), utilizzata in MP3 e formati simili per la compressione della musica, in JPEG e formati simili per le immagini e la famiglia dei formati MPEG per i video.
 
-La DCT è simile in molti modi alla trasformata discreta di Fourier (DFT), che utilizzata per l'analisi spettrale. Una volta appreso come funziona la DCT, sarà più facile spiegare la DFT.
+La DCT è simile in molti modi alla trasformata discreta di Fourier (DFT), utilizzata per l'analisi spettrale. Una volta appreso come funziona la DCT, sarà più facile spiegare la DFT.
 
 Ecco i passaggi per arrivarci:
 
@@ -1992,7 +1992,7 @@ Ecco i passaggi per arrivarci:
 
 \item Inizieremo con il problema della sintesi: dato un insieme di componenti di frequenza e le loro ampiezze, come possiamo costruire un'onda?
 
-\item Poi riscriveremo il problema della sintesi usando gli array NumPy. Questa passaggio è utile per le prestazioni e fornisce anche informazioni per il passo successivo.
+\item Poi riscriveremo il problema della sintesi usando gli array NumPy. Questo passaggio è utile per le prestazioni e fornisce anche informazioni per il passo successivo.
 
 \item Vedremo il problema dell'analisi: dato un segnale e un insieme di frequenze, come possiamo trovare l'ampiezza di ogni componente di frequenza? Inizieremo con una soluzione concettualmente semplice ma lenta.
 
@@ -2065,7 +2065,7 @@ Questa funzione sembra molto diversa, ma fa la stessa cosa. Vediamo come funzion
 
 \end{enumerate} 
 
-La Figura~\ref{fig.synthesis} mostra la struttura di questo calcolo. Ogni riga della matrice, {\tt M}, corrisponde a un tempo compreso tra 0.0 a 1.0 secondi; $t_n$ è il tempo della $n$-esima riga. Ogni colonna corrisponde a una frequenza da 100 a 400 Hz; $f_k$ è la frequenza della colonna $k$-esima colonna.
+La Figura~\ref{fig.synthesis} mostra la struttura di questo calcolo. Ogni riga della matrice, {\tt M}, corrisponde a un tempo compreso tra 0.0 a 1.0 secondi; $t_n$ è il tempo della $n$-esima riga. Ogni colonna corrisponde a una frequenza da 100 a 400 Hz, $f_k$ è la frequenza della $k$-esima colonna.
 
 L'$n$-esima riga è etichettata con le lettere dalla $a$ alla $d$; ad esempio, il valore di $a$ è $\cos [2 \pi (100) t_n]$.
 
@@ -2077,7 +2077,7 @@ Il risultato del prodotto scalare, {\tt ys}, è un vettore con un elemento per o
 %
 E allo stesso modo con gli altri elementi di {\tt ys}. Quindi ogni elemento di {\tt y} è la somma di quattro componenti di frequenza, valutate in un determinato momento e moltiplicate per le ampiezze corrispondenti. Ed è esattamente quello che volevamo.
 
-Possiamo usare il codice della sezione precedente per verificare che le due versioni di {\tt synthesize} producano gli stessi risultati.
+Possiamo usare il codice della sezione precedente per verificare che le due versioni di {\tt synthesize} producono gli stessi risultati.
 
 \begin{verbatim} 
 ys1 = synthesize1(amps, fs, ts)
@@ -2097,7 +2097,7 @@ dove $a$ è un vettore di ampiezze, $t$ è un vettore di tempi, $f$ è un vettor
 
 \section{Analisi} \label{analysis} 
 
-Ora siamo pronti per risolvere il problema dell'analisi. Supponiamo che venga data un'onda e che si dica che è la somma dei coseni con un dato insieme di frequenze. Come si cercherebbe l'ampiezza per ogni componente di frequenza? In altre parole, dati {\tt ys}, {\tt ts} e {\tt fs}, si può recuperare {\tt amps}?
+Ora siamo pronti per risolvere il problema dell'analisi. Supponiamo che venga data un'onda e che ci si dica che è la somma dei coseni con un dato insieme di frequenze. Come si cercherebbe l'ampiezza per ogni componente di frequenza? In altre parole, dati {\tt ys}, {\tt ts} e {\tt fs}, si può recuperare {\tt amps}?
 
 In termini di algebra lineare, il primo passo è lo stesso della sintesi: calcoliamo $M = \cos (2 \pi t \otimes f)$. Poi vogliamo trovare $a$ in modo che $y = M a$; in altre parole, vogliamo risolvere un sistema lineare. NumPy fornisce {\tt linalg.solve}, che fa esattamente questo.
 
@@ -2115,7 +2115,7 @@ Le prime due righe utilizzano {\tt ts} e {\tt fs} per costruire la matrice, {\tt
 
 Ma c'è un intoppo. In generale possiamo risolvere un sistema di equazioni lineari solo se la matrice è quadrata; ovvero, il numero di equazioni (righe) è uguale al numero di incognite (colonne).
 
-In questo esempio, abbiamo solo 4 frequenze, ma abbiamo valutato il segnale a 11,025 volte. Quindi abbiamo molte più equazioni che incognite.
+In questo esempio, abbiamo solo 4 frequenze, ma abbiamo valutato il segnale 11,025 volte. Quindi abbiamo molte più equazioni che incognite.
 
 In generale se {\tt ys} contiene più di 4 elementi, è improbabile che possiamo analizzarlo utilizzando solo 4 frequenze.
 
@@ -2162,7 +2162,7 @@ Ciò implica che se possiamo calcolare $M^{-1}$ in modo efficiente, possiamo tro
 
 L'inversione di una matrice è lenta, in generale, ma alcuni casi speciali sono più veloci. In particolare, se $M$ è {\bf ortogonale}, l'inverso di $M$ è semplicemente la trasposizione di $M$, scritto $M^T$. In NumPy la trasposizione di un array è un'operazione a tempo costante. In realtà non sposta gli elementi dell'array; ma, crea una ``vista'' che cambia il modo in cui si accede agli elementi.
 
-Ancora, una matrice è ortogonale se la sua trasposizione è anche la sua inversa; cioè, $M^T = M^{-1}$. Ciò implica che $M^TM = I$, il che significa che possiamo verificare se una matrice è ortogonale calcolando $M^TM$.
+Inoltre, una matrice è ortogonale se la sua trasposizione è anche la sua inversa; cioè, $M^T = M^{-1}$. Ciò implica che $M^TM = I$, il che significa che possiamo verificare se una matrice è ortogonale calcolando $M^TM$.
 
 Quindi vediamo come appare la matrice in {\tt synthesize2}. Nell'esempio precedente, $M$ ha 11,025 righe, quindi potrebbe essere una buona idea lavorare con un esempio più piccolo:
 
@@ -2209,7 +2209,7 @@ E questa non è la matrice identità.
 
 Ma se scegliamo con attenzione {\tt ts} e {\tt fs}, possiamo rendere $M$ ortogonale. Esistono diversi modi per farlo, motivo per cui esistono diverse versioni della trasformata discreta del coseno (DCT).
 
-Una semplice opzione è spostare {\tt ts} e {\tt fs} di mezza unità. Questa versione è chiamata DCT-IV, dove ``IV'' è un numero romano che indica che questa è la quarta di otto versioni della DCT.
+Una semplice opzione consiste nello spostare {\tt ts} e {\tt fs} di mezza unità. Questa versione è chiamata DCT-IV, dove ``IV'' è un numero romano che indica che questa è la quarta di otto versioni della DCT.
 
 Ecco una versione aggiornata di {\tt test1}:
 
@@ -2222,7 +2222,7 @@ def test2():
     ys = synthesize2(amps, fs, ts)
  \end{verbatim} 
 
-Se lo si confronta con la versione precedente, si noteranno due modifiche. Innanzitutto, si è aggiunto 0.5 a {\tt ts} e a {\tt fs}. Poi, è stato cancellato \verb"time_units", che semplifica l'espressione per {\tt fs}.
+Se la si confronta con la versione precedente, si noteranno due modifiche. Innanzitutto, si è aggiunto 0.5 a {\tt ts} e a {\tt fs}. Poi, è stato cancellato \verb"time_units", che semplifica l'espressione per {\tt fs}.
 
 Con questi valori, $M$ è
 
@@ -2283,7 +2283,7 @@ amps2 = dct_iv(ys)
 max(abs(amps - amps2))
  \end{verbatim} 
 
-A partire da {\tt amps}, sintetizziamo un array di onde, quindi utilizziamo \verb"dct_iv" per calcolare {\tt amps2}. La più grande differenza tra {\tt amps} e {\tt amps2} è circa {\tt 1e-16}, che è ciò che ci aspettiamo a causa di errori in virgola mobile.
+A partire da {\tt amps}, sintetizziamo un array di onde, quindi utilizziamo \verb"dct_iv" per calcolare {\tt amps2}. La più grande differenza tra {\tt amps} e {\tt amps2} è circa {\tt 1e-16}, che è ciò che ci si aspetta a causa di errori in virgola mobile.
 
 \section{DCT inversa} 
 
@@ -2362,7 +2362,7 @@ Per default, l'inversa della DCT non normalizza il risultato, quindi dobbiamo di
 
 Per i seguenti esercizi, si fornisce del codice iniziale in {\tt chap06starter.ipynb}. Le soluzioni sono in {\tt chap06soln.ipynb}.
 
-\begin{exercise} In questo capitolo si sostiene che {\tt analyze1} impiega un tempo proporzionale a $n^3$ e {\tt analyze2} impiega un tempo proporzionale a $n^2$. Per vedere se è vero, eseguirli su una gamma di dimensioni di input e cronometrarli. In Jupyter, si può usare il ``comando magico'' \verb"%timeit".
+\begin{exercise} In questo capitolo si sostiene che {\tt analyze1} impiega un tempo proporzionale a $n^3$ e {\tt analyze2} impiega un tempo proporzionale a $n^2$. Per vedere se è vero, eseguirli su una gamma di dimensioni di input e cronometrarli. In Jupyter, si può usare il ``comando magico'' \verb"\%timeit".
 
 %timeit".
 Se si disegna il tempo di esecuzione rispetto alle dimensioni di input su una scala log-log, si dovrebbe ottenere una linea retta con pendenza 3 per {\tt analyze1} e una pendenza 2 per {\tt analyze2}.
@@ -2379,7 +2379,7 @@ Si potrebbe testare anche \verb"dct_iv" e {\tt scipy.fftpack.dct}.
 
 \item Calcolare la DCT di ogni segmento.
 
-\item Identificare le componenti di frequenza con ampiezze così basse da non essere udibili e rimuoverli. Memorizzare solo le frequenze e le ampiezze rimanenti.
+\item Identificare le componenti di frequenza con ampiezze così basse da non essere udibili e rimuoverle. Memorizzare solo le frequenze e le ampiezze rimanenti.
 
 \item Per riprodurre il segnale, caricare le frequenze e le ampiezze per ogni segmento e applicare la DCT inversa.
 
@@ -2417,7 +2417,7 @@ Una delle mosse più interessanti in matematica è la generalizzazione di un'ope
 
 Se si possiede una certa inclinazione, ci si chiederà come calcolare il fattoriale di un non intero come 3.5. Poiché la definizione naturale non si applica, si potrebbero cercare altri modi per calcolare la funzione fattoriale, modi che funzionino con numeri non interi.
 
-Nel 1730, Leonhard Euler ne trovò una, una generalizzazione della funzione fattoriale che conosciamo come funzione gamma (vedere \url{http://en.wikipedia.org/wiki/Gamma_function}).
+Nel 1730, Leonhard Euler ne trovò una, una generalizzazione della funzione fattoriale che conosciamo come funzione gamma (vedere \url{https://it.wikipedia.org/wiki/Funzione_Gamma}).
 
 Eulero trovò anche una delle generalizzazioni più utili nella matematica applicata, la funzione esponenziale complessa.
 
@@ -2464,7 +2464,7 @@ NumPy fornisce una versione di {\tt exp} che funziona con i numeri complessi:
 
 Python usa {\tt j} per rappresentare l'unità immaginaria, anziché {\tt i}. Un numero che termina con {\tt j} è considerato immaginario, quindi {\tt 1j} è solo $i$.
 
-Quando l'argomento di {\tt np.exp} è immaginario o complesso, il risultato è un numero complesso; in particolare, un {\tt np.complex128}, rappresentato da due numeri a virgola mobile a 64 bit. In questo esempio, il risultato è {\tt 0.0707+0.997j}.
+Quando l'argomento di {\tt np.exp} è immaginario o complesso, il risultato è un numero complesso; in particolare, un {\tt np.complex128}, è rappresentato da due numeri a virgola mobile a 64 bit. In questo esempio, il risultato è {\tt 0.0707+0.997j}.
 
 I numeri complessi hanno gli attributi {\tt real} and {\tt imag}:
 
@@ -2475,7 +2475,7 @@ I numeri complessi hanno gli attributi {\tt real} and {\tt imag}:
 0.997
  \end{verbatim} 
 
-Per ottenere la grandezza [magnitude], si può usare la funzione nativa {\tt abs} o {\tt np.absolute}:
+Per ottenere la grandezza [magnitudine], si può usare la funzione nativa {\tt abs} o {\tt np.absolute}:
 
 \begin{verbatim} 
 >>> abs(z)
@@ -2503,7 +2503,7 @@ Se $\phi(t)$ è una funzione del tempo, anche $e^{i \phi(t)}$ è una funzione de
 %
 Questa funzione descrive una quantità che varia nel tempo, quindi è un segnale. In particolare, è un {\bf segnale esponenziale complesso}.
 
-Nel caso speciale in cui la frequenza del segnale è costante, $\phi(t)$ è $2 \pi f t$ e il risultato è una {\bf sinusoide complessa}:
+Nel caso speciale in cui la frequenza del segnale sia costante, $\phi(t)$ è $2 \pi f t$ e il risultato è una {\bf sinusoide complessa}:
 
 %
 \[ e^{i 2 \pi f t} = \cos 2 \pi f t + i \sin 2 \pi f t \] 
@@ -2575,7 +2575,7 @@ Il risultato è:
   0.979 -1.803e-01j  0.995 -9.093e-02j  1.000 -5.081e-15j]
  \end{verbatim} 
 
-Al livello più basso, un segnale complesso è una sequenza di numeri complessi. Ma come interpretarlo? Abbiamo qualche intuizione per segnali reali: rappresentano quantità che variano nel tempo; ad esempio, un segnale acustico rappresenta i cambiamenti nella pressione dell'aria. Ma nulla di ciò che misuriamo nel mondo produce numeri complessi.
+Al livello più basso, un segnale complesso è una sequenza di numeri complessi. Ma come interpretarlo? Abbiamo qualche intuizione per segnali reali: rappresentano quantità che variano nel tempo; ad esempio, un segnale acustico rappresenta i cambiamenti nella pressione dell'aria. Ma nulla di ciò che misuriamo nel mondo reale produce numeri complessi.
 
 \begin{figure} 
 
@@ -2588,7 +2588,7 @@ Allora cos'è un segnale complesso? Non abbiamo una risposta soddisfacente a que
 
 \item Un segnale complesso è un'astrazione matematica utile per il calcolo e l'analisi, ma non corrisponde direttamente a nulla nel mondo reale.
 
-\item Se lo si desidera, si può pensare a un segnale complesso come una sequenza di numeri complessi che contiene due segnali come le sue parti reali e immaginarie.
+\item Se lo si desidera, si può pensare a un segnale complesso come una sequenza di numeri complessi contenente due segnali corrispondenti alle sue parti reali e immaginarie.
 
 \end{enumerate} 
 
@@ -2600,7 +2600,7 @@ Prendendo il secondo punto di vista, possiamo suddividere il segnale precedente 
     plt.plot(ts[:n], ys[:n].imag, label='imag')
  \end{verbatim} 
 
-La Figura~\ref{fig.dft1} mostra un segmento del risultato. La parte reale è una somma di coseni; la parte immaginaria è una somma di seni. Sebbene le forme d'onda abbiano un aspetto diverso, contengono le stesse componenti di frequenza nelle stesse proporzioni. Per le nostre orecchie, suonano allo stesso modo (in generale, non sentiamo l'offset della fase).
+La Figura~\ref{fig.dft1} mostra un segmento del risultato. La parte reale è una somma di coseni; la parte immaginaria è una somma di seni. Sebbene le forme d'onda abbiano un aspetto diverso, contengono le stesse componenti di frequenza nelle stesse proporzioni. Alle nostre orecchie, suonano allo stesso modo (in generale, non sentiamo l'offset della fase).
 
 \section{Sintesi con le matrici} \label{synthmat} 
 
@@ -2698,7 +2698,7 @@ Queste sono approssimativamente le ampiezze con cui abbiamo iniziato, sebbene og
 
 Sfortunatamente, risolvere un sistema lineare di equazioni è lento. Per la DCT, siamo stati in grado di accelerare le cose scegliendo {\tt fs} e {\tt ts} in modo che {\tt M} sia ortogonale. In questo modo, l'inverso di {\tt M} è la trasposizione di {\tt M}, e possiamo calcolare sia la DCT che la DCT inversa mediante moltiplicazione di matrici.
 
-Faremo la stessa cosa per la DFT, con una piccola modifica. Poiché {\tt M} è complesso, è necessario che sia {\bf unitary}, piuttosto che ortogonale, il che significa che l'inverso di {\tt M} è la trasposizione coniugata di {\tt M}, che possiamo calcolare trasponendo la matrice e negando la parte immaginaria di ogni elemento. Vedere \url{http://en.wikipedia.org/wiki/Unitary_matrix}.
+Faremo la stessa cosa per la DFT, con una piccola modifica. Poiché {\tt M} è complesso, è necessario che sia {\bf unitaria}, piuttosto che ortogonale, il che significa che l'inverso di {\tt M} è la trasposta coniugata di {\tt M}, che possiamo calcolare trasponendo la matrice e negando la parte immaginaria di ogni elemento. Vedere \url{https://it.wikipedia.org/wiki/Matrice_unitaria}.
 
 I metodi NumPy {\tt conj} e {\tt transpose} fanno quello che vogliamo. Ecco il codice che calcola {\tt M} per $N=4$ componenti:
 
@@ -2727,7 +2727,7 @@ Possiamo usare questo risultato per scrivere una versione più veloce di {\tt an
     return amps
  \end{verbatim} 
 
-E provalo con i valori appropriati di {\tt fs} e {\tt ts}:
+E provarlo con i valori appropriati di {\tt fs} e {\tt ts}:
 
 \begin{verbatim} 
     N = 4
@@ -2746,9 +2746,9 @@ Anche in questo caso, il risultato è corretto entro la tolleranza dell'aritmeti
 
 \section{DFT} \label{dftsection} 
 
-Come funzione, {\tt analyze2} sarebbe difficile da usare perché funziona solo se {\tt fs} e {\tt ts} sono scelti correttamente. Invece, la riscriveremo per prendere solo {\tt ys} e calcolare {\tt freq} e {\tt ts} itself.
+Come funzione, {\tt analyze2} sarebbe difficile da usare perché funziona solo se {\tt fs} e {\tt ts} vengono scelti correttamente. Invece, la riscriveremo per prendendo solo {\tt ys} e calcolando {\tt freq} e {\tt ts}.
 
-Per prima cosa, creeremo una funzione per calcolare la matrice di sintesi, $M$:
+Per prima cosa, si crea una funzione per calcolare la matrice di sintesi, $M$:
 
 \begin{verbatim} 
 def synthesis_matrix(N):
@@ -2759,7 +2759,7 @@ def synthesis_matrix(N):
     return M
  \end{verbatim} 
 
-Quindi scriveremo la funzione che prende {\tt ys} e restituisce {\tt amps}:
+Poi si scrive la funzione che prende {\tt ys} e restituisce {\tt amps}:
 
 \begin{verbatim} 
 def analyze3(ys):
@@ -2786,7 +2786,7 @@ Ora possiamo confermare che questa versione produce lo stesso risultato della FF
 [ 2.4+0.j  1.0+0.j  0.4-0.j  0.2-0.j]
  \end{verbatim} 
 
-Il risultato è vicino a {\tt amps * N}. Ed ecco la versione in {\tt np.fft}:
+Il risultato è vicino ad {\tt amps * N}. Ed ecco la versione in {\tt np.fft}:
 
 \begin{verbatim} 
 >>> np.fft.fft(ys)
@@ -2862,7 +2862,7 @@ Pertanto, ciascuna somma è la correlazione di $y$ con uno dei segnali nell'arra
 % dft.py
 \centerline{\includegraphics[height=2.5in]{figs/dft3.pdf}} \caption{DFT di un segnale a dente di sega a 500 Hz campionato a 10 kHz.} \label{fig.dft3} \end{figure} 
 
-La classe Spectrum in {\tt thinkdsp} è basata su {\tt np.ftt.rfft}, che calcola la ``DFT reale''; cioè funziona con segnali reali. Ma la DFT presentata in questo capitolo è più generale di questa; funziona con segnali complessi.
+La classe Spectrum in {\tt thinkdsp} è basata su {\tt np.ftt.rfft}, che calcola la ``DFT reale''; cioè funziona con segnali reali. Ma la DFT presentata in questo capitolo è più generale; funziona con segnali complessi.
 
 Quindi cosa succede quando applichiamo la ``DFT completa'' a un segnale reale? Diamo un'occhiata a un esempio:
 
@@ -2895,7 +2895,7 @@ La Figura~\ref{fig.dft3} mostra l'ampiezza del segnale per ogni componente di fr
 
 Ma la metà destra della figura è una sorpresa. Oltre i 5000 Hz, l'ampiezza delle armoniche ricomincia a crescere, raggiungendo il picco a 9500 Hz. Cosa succede?
 
-La risposta: aliasing. Ricordarsi che con framerate 10000 Hz, la frequenza di piegatura [folding] è di 5000 Hz. Come abbiamo visto nella Sezione~\ref{aliasing}, una componente a 5500 Hz è indistinguibile da una componente a 4500 Hz. Quando valutiamo la DFT a 5500 Hz, otteniamo lo stesso valore di 4500 Hz. Allo stesso modo, il valore a 6000 Hz è lo stesso di quello a 4000 Hz e così via.
+La risposta: aliasing. Ci si deve ricordare che con un framerate di 10000 Hz, la frequenza di piegatura [folding] è di 5000 Hz. Come abbiamo visto nella Sezione~\ref{aliasing}, una componente a 5500 Hz è indistinguibile da una componente a 4500 Hz. Quando valutiamo la DFT a 5500 Hz, otteniamo lo stesso valore di 4500 Hz. Allo stesso modo, il valore a 6000 Hz è lo stesso di quello a 4000 Hz e così via.
 
 La DFT di un segnale reale è simmetrica rispetto alla frequenza di ripiegamento [folding]. Dato che non ci sono informazioni aggiuntive oltre questo punto, possiamo risparmiare tempo valutando solo la prima metà della DFT, ed è esattamente ciò che fa {\tt np.fft.rfft}.
 
@@ -2950,7 +2950,7 @@ Il codice per questo capitolo è in {\tt chap08.ipynb}, nel repository di questo
 % convolution1.py
 \centerline{\includegraphics[height=2.5in]{figs/convolution1.pdf}} \caption{Prezzo di chiusura giornaliero delle azioni di Facebook e media mobile di 30 giorni.} \label{fig.convolution1} \end{figure} 
 
-Lo smoothing è un'operazione che cerca di rimuovere le variazioni a breve termine da un segnale per rivelare le tendenze a lungo termine. Ad esempio, se si disegnano le variazioni giornaliere del prezzo di un'azione, sembrano rumorose; un operatore di smoothing potrebbe rendere più facile vedere se il prezzo sta generalmente aumentando o diminuendo nel tempo.
+Lo smoothing è un'operazione che cerca di rimuovere le variazioni a breve termine da un segnale per rivelare le tendenze a lungo termine. Ad esempio, se si disegnano le variazioni giornaliere del prezzo di un'azione, queste sembrano rumorose; un operatore di smoothing potrebbe rendere più facile vedere se il prezzo sta generalmente aumentando o diminuendo nel tempo.
 
 Un algoritmo di smoothing comune è una media mobile, che calcola la media degli $n$ valori precedenti, per un dato valore di $n$.
 
@@ -3043,7 +3043,7 @@ La definizione di convoluzione è leggermente diversa:
 %
 Il simbolo $\conv$ rappresenta la convoluzione. La differenza sta nell'indice di $g$: $m$ è stato negato, quindi la somma itera gli elementi di $g$ all'indietro (supponendo che gli indici negativi si estendano alla fine dell'array).
 
-Poiché la finestra che usata in questo esempio è simmetrica, la cross-correlazione e la convoluzione producono lo stesso risultato. Con altre finestre, dovremo stare più attenti.
+Poiché la finestra usata in questo esempio è simmetrica, la cross-correlazione e la convoluzione producono lo stesso risultato. Con altre finestre, dovremo stare più attenti.
 
 Ci si potrebbe chiedere perché la convoluzione è definita in questo modo. Ci sono due ragioni:
 
@@ -3078,11 +3078,11 @@ Poi l'onda con smoothing:
     spectrum2.plot()
  \end{verbatim} 
 
-Il flag della modalità {\tt same} indica che il risultato dovrebbe avere la stessa lunghezza dell'input. In questo esempio, includerà alcuni valori che ``arrotolano [wrap around]'', ma per ora va bene.
+Il flag della modalità {\tt same} indica che il risultato dovrebbe avere la stessa lunghezza dell'input. In questo esempio, includerà alcuni valori che di ``arrotolamento [wrap around]'', ma per ora va bene.
 
-La Figura~\ref{fig.convolution4} mostra il risultato. La frequenza fondamentale è pressoché invariata; le prime poche armoniche vengono attenuate e le armoniche superiori vengono quasi eliminate. quindi lo ha l'effetto di un filtro passa-basso, che abbiamo visto nella Sezione \ref{spectrums} e nella Sezione \ref{pink}.
+La Figura~\ref{fig.convolution4} mostra il risultato. La frequenza fondamentale è pressoché invariata; le prime poche armoniche vengono attenuate e le armoniche superiori vengono quasi eliminate. Quindi lo smoothing ha l'effetto di un filtro passa-basso, che abbiamo visto nella Sezione \ref{spectrums} e nella Sezione \ref{pink}.
 
-Per vedere di quanto ogni componente è stata attenuata, possiamo calcolare il rapporto tra i due spettri:
+Per vedere di quanto ogni componente sia stata attenuata, possiamo calcolare il rapporto tra i due spettri:
 
 \begin{verbatim} 
     amps = spectrum.amps
@@ -3099,7 +3099,7 @@ Per vedere di quanto ogni componente è stata attenuata, possiamo calcolare il r
 % convolution5.py
 \centerline{\includegraphics[height=2.5in]{figs/convolution5.pdf}} \caption{Rapporto degli spettri per l'onda quadra, prima e dopo lo smoothing.} \label{fig.convolution5} \end{figure} 
 
-La Figura~\ref{fig.convolution5} mostra il risultato. Come previsto, il rapporto è alto per le basse frequenze e scende a una frequenza di taglio vicino a 4000 Hz. Ma c'è un'altra caratteristica che non ci aspettavamo: al di sopra del taglio [cutoff], il rapporto rimbalza tra 0 e 0.2. Cosa succede con quello?
+La Figura~\ref{fig.convolution5} mostra il risultato. Come previsto, il rapporto è alto per le basse frequenze e scende a una frequenza di taglio vicino a 4000 Hz. Ma c'è un'altra caratteristica che non ci aspettavamo: al di sopra del taglio [cutoff], il rapporto rimbalza tra 0 e 0.2. Cosa succede da quella parte?
 
 \section{Il teorema della convoluzione} \label{convtheorem} 
 
@@ -3116,7 +3116,7 @@ La risposta è il teorema della convoluzione. Espresso matematicamente:
 \[ \DFT(f \conv g) = \DFT(f) \cdot \DFT(g) \] 
 
 %
-dove $f$ è l'array di un'onda e $g$ è una finestra. In parole, il teorema di convoluzione dice che se convolgiamo $f$ e $g$ e poi calcoliamo la DFT, otteniamo la stessa risposta calcolando la DFT di $f$ e $g$ e poi moltiplicando il risultato per gli elementi. Più concisamente, la convoluzione nel dominio del tempo corrisponde alla moltiplicazione nel dominio della frequenza.
+dove $f$ è l'array di un'onda e $g$ è una finestra. In parole, il teorema di convoluzione dice che se convolgiamo $f$ e $g$ e poi calcoliamo la DFT, otteniamo la stessa risposta calcolando la DFT di $f$ e $g$ e moltiplicando poi il risultato per gli elementi. Più concisamente, la convoluzione nel dominio del tempo corrisponde alla moltiplicazione nel dominio della frequenza.
 
 E questo spiega la Figura~\ref{fig.convolution5}, perché quando si effettua la convoluzione di un'onda e una finestra, moltiplichiamo lo spettro dell'onda per lo spettro della finestra. Per vedere come funziona, possiamo calcolare la DFT della finestra:
 
@@ -3145,7 +3145,7 @@ In questo contesto, la DFT di una finestra è chiamata {\bf filtro}. Per ogni fi
 % convolution7.py
 \centerline{\includegraphics[height=2.5in]{figs/convolution7.pdf}} \caption{Boxcar e finestre Gaussiane.} \label{fig.convolution7} \end{figure} 
 
-La finestra della media mobile che abbiamo usato nella sezione precedente è un filtro passa-basso, ma non è molto buono. All'inizio la DFT si abbassa rapidamente, ma poi rimbalza. Questi rimbalzi sono chiamati {\bf sidelobes} e sono presenti perché la finestra della media mobile è come un'onda quadra, quindi il suo spettro contiene armoniche ad alta frequenza che scendono proporzionalmente a $1/f$, che è relativamente lento.
+La finestra della media mobile che abbiamo usato nella sezione precedente è un filtro passa-basso, ma non è molto buono. All'inizio la DFT si abbassa rapidamente, ma poi rimbalza. Questi rimbalzi sono chiamati {\bf lobi laterali} e sono presenti perché la finestra della media mobile è come un'onda quadra, quindi il suo spettro contiene armoniche ad alta frequenza che scendono proporzionalmente a $1/f$, che è relativamente lento.
 
 Possiamo fare di meglio con una finestra Gaussiana. SciPy fornisce delle funzioni che calcolano molte finestre di convoluzione comuni, inclusa {\tt gaussian}:
 
@@ -3161,7 +3161,7 @@ Possiamo fare di meglio con una finestra Gaussiana. SciPy fornisce delle funzion
 % convolution.py
 \centerline{\includegraphics[height=2.5in]{figs/convolution8.pdf}} \caption{Rapporto degli spettri prima e dopo lo smoothing Gaussiano e la DFT della finestra.} \label{fig.convolution8} \end{figure} 
 
-Sono stati eseguite di nuovo i calcoli delle sezioni precedenti con questa curva e si è generata la Figura \ref{fig.convolution8}, che mostra il rapporto degli spettri prima e dopo lo smoothing, insieme alla DFT della finestra Gaussiana.
+Sono stati eseguiti di nuovo i calcoli delle sezioni precedenti con questa curva e si è generata la Figura \ref{fig.convolution8}, che mostra il rapporto degli spettri prima e dopo lo smoothing, insieme alla DFT della finestra Gaussiana.
 
 Come filtro passa-basso, lo smoothing Gaussiano è migliore di una semplice media mobile. Dopo che il rapporto si è abbassato, rimane basso, con quasi nessuno dei lobi laterali visti con la finestra del boxcar. Quindi fa un lavoro migliore nel tagliare le frequenze più alte.
 
@@ -3196,7 +3196,7 @@ Possiamo confermare che funziona calcolando la stessa convoluzione in entrambi i
 
 Questo esempio utilizza Pandas per leggere i dati dal file CSV (incluso nel repository di questo libro). Se non si ha familiarità con i Panda, non c'è da preoccuparsi: non se ne farà molto in questo libro. Ma per saperne di più si può leggere {\it Think Stats} da \url{http://thinkstats2.com}.
 
-Il risultato, {\tt df}, è un DataFrame, una delle strutture di dati fornite da Pandas. {\tt ys} è un array NumPy che contiene i prezzi di chiusura giornalieri.
+Il risultato, {\tt df}, è un DataFrame, una delle strutture dati fornite da Pandas. {\tt ys} è un array NumPy che contiene i prezzi di chiusura giornalieri.
 
 Successivamente creeremo una finestra Gaussiana per una convoluzione con {\tt ys}:
 
@@ -3316,7 +3316,7 @@ close = thinkdsp.Wave(ys, framerate=1)
 spectrum = wave.make_spectrum()
  \end{verbatim} 
 
-Questo esempio utilizza Pandas per leggere il file CSV; il risultato è un DataFrame, {\tt df}, con colonne per il prezzo di apertura, quello di chiusura e i prezzi massimo e minimo. Si selezionano i prezzi di chiusura e si salvano in un oggetto Wave. Il framerate è di 1 campione al giorno.
+Questo esempio utilizza Pandas per leggere il file CSV; il risultato è un DataFrame, {\tt df}, con colonne per il prezzo di apertura, quello di chiusura, il prezzo massimo e quello minimo. Si selezionano i prezzi di chiusura e si salvano in un oggetto Wave. Il framerate è di 1 campione al giorno.
 
 La Figura~\ref{fig.diff_int1} mostra questa serie temporale e il suo spettro. Visivamente, la serie temporale assomiglia al rumore Browniano (vedere la Sezione~\ref{brownian}). E lo spettro sembra una linea retta, anche se rumorosa. La pendenza stimata è -1,9, che è coerente con il rumore Browniano.
 
@@ -3417,7 +3417,7 @@ Se non si ha familiarità con quel linguaggio, ecco cosa significa:
 
 Poiché le sinusoidi complesse sono autofunzioni dell'operatore di differenziazione, sono facili da differenziare. Tutto quello che dobbiamo fare è moltiplicare per uno scalare complesso.
 
-Per i segnali con più di una componente, il processo è solo leggermente più difficile:
+Per i segnali con più di una componente, il processo è solo leggermente più complicato:
 
 \begin{enumerate} 
 
@@ -3455,7 +3455,7 @@ Possiamo usarlo per calcolare la derivata della serie temporale di Facebook:
 
 La Figura~\ref{fig.diff_int4} confronta le variazioni di prezzo giornaliere calcolate da {\tt np.diff} con la derivata appena calcolata. Sono stati selezionati i primi 50 valori nelle serie temporali in modo da poter vedere le differenze più chiaramente.
 
-La derivata è più rumorosa, perché amplifica maggiormente le componenti ad alta frequenza, come mostrato in Figura \ref{fig.diff_int3} (a sinistra). Inoltre, i primi pochi elementi della derivata sono molto rumorosi. Il problema è che la derivata basata sulla DFT si basa sul presupposto che il segnale sia periodico. In effetti, collega di nuovo l'ultimo elemento della serie temporale al primo elemento, che crea artefatti ai bordi.
+La derivata è più rumorosa, perché amplifica maggiormente le componenti ad alta frequenza, come mostrato in Figura \ref{fig.diff_int3} (a sinistra). Inoltre, i primi pochi elementi della derivata sono molto rumorosi. Il problema è che la derivata basata sulla DFT si basa sul presupposto che il segnale sia periodico. In effetti, collega di nuovo l'ultimo elemento della serie temporale al primo elemento, creando artefatti ai bordi.
 
 Per riassumere, abbiamo mostrato:
 
@@ -3512,7 +3512,7 @@ Ma si noti che a $f=0$, si sta dividendo per 0. Il risultato in NumPy è NaN, ch
     integ_wave = integ_spectrum.make_wave()
  \end{verbatim} 
 
-La Figura~\ref{fig.diff_int5} mostra questa derivata integrata insieme alle serie temporali originali. Sono quasi identiche, ma la derivata integrata è spostata verso il basso. Il problema è che quando abbiamo eliminato la componente $f=0$, abbiamo impostato il bias del segnale a 0. Ma questo non dovrebbe sorprendere; in generale, la differenziazione perde informazioni sul bias e l'integrazione non può recuperarle. In un certo senso, il NaN a $f=0$ ci dice che questo elemento è ignoto.
+La Figura~\ref{fig.diff_int5} mostra questa derivata integrata insieme alle serie temporali originali. Sono quasi identiche, ma la derivata integrata è spostata verso il basso. Il problema è che quando abbiamo eliminato la componente $f=0$, abbiamo impostato lo spostamento [bias] del segnale a 0. Ma questo non dovrebbe sorprendere; in generale, la differenziazione perde informazioni sul bias e l'integrazione non può recuperarle. In un certo senso, il NaN a $f=0$ ci dice che questo elemento è ignoto.
 
 \begin{figure} 
 
@@ -3566,7 +3566,7 @@ Possiamo vederlo graficamente calcolando il filtro che corrisponde alla somma cu
     cumsum_filter.hs = 1 / cumsum_filter.hs
  \end{verbatim} 
 
-Poiché {\tt cumsum} è l'operazione inversa di {\tt diff}, iniziamo con una copia di \verb"diff_filter", che è il filtro che corrisponde all'operazione {\tt diff}, e poi inverte le {\tt hs}.
+Poiché {\tt cumsum} è l'operazione inversa di {\tt diff}, iniziamo con una copia di \verb"diff_filter", che è il filtro che corrisponde all'operazione {\tt diff}, e poi si invertono le {\tt hs}.
 
 \begin{figure} 
 
@@ -3614,7 +3614,7 @@ Entro i limiti dell'errore in virgola mobile, \verb"out_wave2" è identico a \ve
 
 Nella Sezione \ref{brownian}, abbiamo generato il rumore Browniano calcolando la somma cumulativa del rumore bianco. Ora che comprendiamo l'effetto di {\tt cumsum} nel dominio della frequenza, abbiamo una panoramica dello spettro del rumore Browniano.
 
-Il rumore bianco ha la stessa potenza a tutte le frequenze, in media. Quando calcoliamo la somma cumulativa, l'ampiezza di ogni componente viene divisa per $f$. Poiché la potenza è il quadrato dell'ampiezza [magnitude], la potenza di ogni componente viene divisa per $f^2$. Quindi, in media, la potenza alla frequenza $f$ è proporzionale a $1 / f^2$:
+Il rumore bianco ha la stessa potenza a tutte le frequenze, in media. Quando calcoliamo la somma cumulativa, l'ampiezza di ogni componente viene divisa per $f$. Poiché la potenza è il quadrato dell'ampiezza, la potenza di ogni componente viene divisa per $f^2$. Quindi, in media, la potenza alla frequenza $f$ è proporzionale a $1 / f^2$:
 
 %
 \[ P_f = K / f^2 \] 
@@ -3650,7 +3650,7 @@ Disegnare i filtri che corrispondono alla differenza seconda e alla derivata sec
 
 \chapter{Sistemi Dinamici Lineari Stazionari} \label{systems} 
 
-Questo capitolo presenta la teoria dei segnali e dei sistemi, utilizzando l'acustica musicale come esempio. Spiega un'importante applicazione del Teorema della Convoluzione, caratterizzazione dei sistemi LTI [ Linear, Time-Invariant = Dinamici Lineari Stazionari] (che definiremo a breve).
+Questo capitolo presenta la teoria dei segnali e dei sistemi, utilizzando l'acustica musicale come esempio. Spiega un'importante applicazione del Teorema della Convoluzione, caratterizzazione dei sistemi LTI [Linear, Time-Invariant = Lineari Stazionari] (che definiremo a breve).
 
 Il codice per questo capitolo è in {\tt chap10.ipynb}, nel repository di questo libro (vedere la Sezione~\ref{code}). Lo si può anche visualizzare su \url{http://tinyurl.com/thinkdsp10}.
 
@@ -3662,7 +3662,7 @@ Ad esempio, un amplificatore elettronico è un circuito che prende un segnale el
 
 Come altro esempio, quando si ascolta una performance musicale, si può pensare alla stanza come a un sistema che prende il suono della performance nel punto in cui viene generato e produce un suono leggermente diverso nel luogo in cui lo si sente.
 
-Un {\bf sistema dinamico lineare stazionario}\footnote{La presentazione qui segue \url{http://en.wikipedia.org/wiki/LTI_system_theory}.} è un sistema con queste due proprietà:
+Un {\bf sistema dinamico lineare stazionario}\footnote{La presentazione qui segue \url{https://it.wikipedia.org/wiki/Sistema_dinamico_lineare_stazionario}.} è un sistema con queste due proprietà:
 
 \begin{enumerate} 
 
@@ -3684,7 +3684,7 @@ Molti sistemi fisici hanno queste proprietà, almeno approssimativamente.
 
 \end{itemize} 
 
-I sistemi LTI sono descritti da equazioni differenziali lineari e le soluzioni di queste equazioni sono sinusoidi complesse (vedere \url{http://en.wikipedia.org/wiki/Linear_differential_equation}).
+I sistemi LTI sono descritti da equazioni differenziali lineari e le soluzioni di queste equazioni sono sinusoidi complesse (vedere \url{https://it.wikipedia.org/wiki/Equazione_differenziale_lineare}).
 
 Questo risultato fornisce un algoritmo per calcolare l'effetto di un sistema LTI su un segnale di ingresso:
 
@@ -3730,7 +3730,7 @@ Quando si testa un sistema immettendo un impulso, si sta verificando la risposta
 
 Per mostrare perché questo tipo di caratterizzazione del sistema funziona, inizieremo con un semplice esempio: una media mobile a 2 elementi. Possiamo pensare a questa operazione come a un sistema che prende un segnale come ingresso e produce un segnale leggermente più fluido come uscita.
 
-In questo esempio sappiamo qual è la finestra, quindi possiamo calcolare il filtro corrispondente. Ma di solito non è così; nella prossima sezione vedremo un esempio in cui non conosciamo la finestra o il filtro in anticipo.
+In questo esempio sappiamo qual è la finestra, quindi possiamo calcolare il filtro corrispondente. Ma di solito non è così; nella prossima sezione vedremo un esempio in cui non conosciamo in anticipo la finestra o il filtro.
 
 \begin{figure} 
 
@@ -3844,7 +3844,7 @@ C'è una cosa che abbiamo sorvolato in questo esempio che verrà menzionato nel 
 % systems.py
 \centerline{\includegraphics[height=2.5in]{figs/systems8.pdf}} \caption{Somma di un'onda e una copia spostata e scalata.} \label{fig.systems8} \end{figure} 
 
-Se pensate che l'esempio precedente sia magia nera, non siete i soli. C'ho pensato per un po' e mi fa ancora male la testa.
+Se pensate che l'esempio precedente sia magia nera, non siete i soli. Ci ho pensato per un po' e mi fa ancora male la testa.
 
 Nella sezione precedente, abbiamo suggerito un modo di pensarci:
 
