@@ -3844,7 +3844,7 @@ C'è una cosa che abbiamo sorvolato in questo esempio che verrà menzionato nel 
 % systems.py
 \centerline{\includegraphics[height=2.5in]{figs/systems8.pdf}} \caption{Somma di un'onda e una copia spostata e scalata.} \label{fig.systems8} \end{figure} 
 
-Se pensate che l'esempio precedente sia magia nera, non siete i soli. Ci ho pensato per un po' e mi fa ancora male la testa.
+Se pensate che l'esempio precedente sia magia nera, non siete i soli. Ci ho riflettuto per un po' e mi fa ancora male la testa.
 
 Nella sezione precedente, abbiamo suggerito un modo di pensarci:
 
@@ -4206,7 +4206,7 @@ Il risultato è abbastanza vicino all'onda originale, sebbene circa la metà del
 % sampling.py
 \centerline{\includegraphics[height=3.0in]{figs/sampling3.pdf}} \caption{Spettro di un segnale prima (in alto) e dopo (in basso) il campionamento.} \label{fig.sampling3} \end{figure} 
 
-Abbiamo spiegato la modulazione di ampiezza in parte perché è interessante, ma soprattutto perché ci aiuterà a capire il campionamento. Il ``campionamento'' è il processo di misurazione di un segnale analogico in una serie di punti nel tempo, solitamente con spaziatura uguale.
+Abbiamo spiegato la modulazione di ampiezza in parte perché è interessante, ma soprattutto perché ci aiuterà a capire il campionamento. Il ``campionamento'' è il processo di misura di un segnale analogico in una serie di punti nel tempo, solitamente con spaziatura uguale.
 
 Ad esempio, i file WAV utilizzati come esempi sono stati registrati campionando l'uscita di un microfono utilizzando un convertitore analogico-digitale (ADC). La frequenza di campionamento per la maggior parte di essi è 44.1 kHz, che è la frequenza standard per il suono di ``qualità CD'', o a 48 kHz, che è lo standard per il suono DVD.
 
@@ -4343,13 +4343,13 @@ Il valore di sinc è 1 a 0 e 0 su ogni altro valore intero di $x$. Quando sposti
 
 La Figura~\ref{fig.sampling8} mostra come funziona utilizzando un breve segmento dell'assolo di basso. La linea nella parte superiore è l'onda originale. Le linee grigie verticali mostrano i valori campionati. Le curve sottili sono le copie spostate e in scala della funzione sinc. La somma di queste funzioni sinc è identica all'onda originale.
 
-Leggere di nuovo l'ultima frase, perché è più sorprendente di quanto possa sembrare. Poiché abbiamo iniziato con un segnale che non conteneva energia superiore a 5512 Hz, e abbiamo campionato a 11,025 Hz, siamo stati in grado di recuperare esattamente lo spettro originale.
+Leggere di nuovo l'ultima frase, perché è più sorprendente di quanto possa sembrare. Poiché abbiamo iniziato con un segnale che non conteneva energia al di sopra di 5512 Hz, e abbiamo campionato a 11,025 Hz, siamo stati in grado di recuperare esattamente lo spettro originale.
 
 In questo esempio, abbiamo iniziato con un'onda che era già stata campionata a 44,100 Hz, ed è stata ri-campionata a 11,025 Hz. Dopo il ricampionamento, il divario tra le copie spettrali è la frequenza di campionamento, 11.025 kHz. Se il segnale originale contiene componenti che superano la metà della frequenza di campionamento, 5512 Hz, le copie si sovrappongono e perdiamo informazioni.
 
 Ma se il segnale è ``a larghezza di banda limitata''; cioè non contiene energia al di sopra di 5512 Hz, le copie spettrali non si sovrappongono, non perdiamo informazioni e possiamo recuperare esattamente il segnale originale.
 
-Questo risultato è noto come teorema di campionamento di Nyquist-Shannon (vedere \url{https://en.wikipedia.org/wiki/Nyquist-Shannon_sampling_theorem}).
+Questo risultato è noto come teorema del campionamento di Nyquist-Shannon (vedere \url{https://en.wikipedia.org/wiki/Nyquist-Shannon_sampling_theorem}).
 
 Questo esempio non dimostra il Teorema del Campionamento, ma si spera che aiuti a capire cosa dice e perché funziona.
 
