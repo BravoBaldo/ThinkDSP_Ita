@@ -1,6 +1,6 @@
 % LaTeX source for ``Think DSP: Digital Signal Processing for Programmers''
 % Copyright 2014  Allen B. Downey.
-% License: Creative Commons 
+% License: Creative Commons
 % Attribution-NonCommercial-ShareAlike 4.0 International
 % http://creativecommons.org/licenses/by-nc-sa/4.0/
 %
@@ -32,7 +32,7 @@
 
 \newcommand{\thetitle}{Think DSP} \newcommand{\thesubtitle}{Digital Signal Processing in Python} \newcommand{\theversion}{1.1.2
 
-(Trad. Ita: 18 gennaio 2021)}
+(Trad. Ita: 02 febbraio 2021)}
 
 % these styles get translated in CSS for the HTML version
 \newstyle{a:link}{color:black;} \newstyle{p+p}{margin-top:1em;margin-bottom:1em} \newstyle{img}{border:0px} 
@@ -156,7 +156,7 @@ Copyright 2014 Allen B. Downey
 
 \vspace{0.25in} 
 
-È concesso il permesso di copiare, distribuire e/o modificare questo documento in base ai termini della Licenza Internazionale [Unported] Creative Commons Attribuzione-Non Commerciale-Condividi allo stesso modo 4.0, disponibile al link \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}.
+È concesso il permesso di copiare, distribuire e/o modificare questo documento in base ai termini della Licenza Internazionale Creative Commons Attribuzione-Non Commerciale-Condividi allo stesso modo 4.0, disponibile al link \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}.
 
 \setcounter{chapter}{-1}
 
@@ -2271,7 +2271,7 @@ def dct_iv(ys):
 
 Di nuovo, {\tt ys} è l'array di onde. Non dobbiamo passare {\tt ts} e {\tt fs} come parametri; \verb"dct_iv" può calcolarli in base a {\tt N}, la lunghezza di {\tt ys}.
 
-Se abbiamo capito bene, questa funzione dovrebbe risolvere il problema dell'analisi; cioè, dato {\tt ys} dovrebbe essere in grado di recuperare {\tt amps}. Possiamo testarlo in questo modo.
+Se abbiamo capito bene, questa funzione dovrebbe risolvere il problema dell'analisi; cioè, dato {\tt ys} dovrebbe essere in grado di recuperare {\tt amps}. Possiamo testarlo in questo modo:
 
 \begin{verbatim} 
 amps = np.array([0.6, 0.25, 0.1, 0.05])
@@ -2537,7 +2537,7 @@ Il risultato è un array NumPy di numeri complessi:
 [ 0.324+0.505j -0.505+0.324j -0.324-0.505j  0.505-0.324j]
  \end{verbatim} 
 
-La frequenza di questo segnale è di 1 ciclo al secondo; l'ampiezza è 0.6 (in unità non specificate); e l'offset di fase è 1 radiante.
+La frequenza di questo segnale è di 1 ciclo al secondo, l'ampiezza è 0.6 (in unità non specificate) e l'offset di fase è 1 radiante.
 
 Questo esempio valuta il segnale in 4 punti equidistanti tra 0 e 1 secondo. I campioni risultanti sono numeri complessi.
 
@@ -3804,7 +3804,7 @@ Si seleziona un segmento a partire da 0.26 secondi per rimuovere il silenzio pri
 
 La Figura~\ref{fig.systems6} (a destra) mostra il risultato. Questo spettro codifica la risposta della stanza; per ogni frequenza, lo spettro contiene un numero complesso che rappresenta un moltiplicatore di ampiezza e uno sfasamento. Questo spettro è chiamato {\bf funzione di trasferimento} perché contiene informazioni su come il sistema trasferisce l'input all'output.
 
-Ora possiamo simulare l'effetto che questa stanza avrebbe sul suono di un violino. Ecco la registrazione del violino che abbiamo usato nella Sezione \ref{violin} 
+Ora possiamo simulare l'effetto che questa stanza avrebbe sul suono di un violino. Ecco la registrazione del violino che abbiamo usato nella Sezione \ref{violin}:
 
 \begin{verbatim} 
     violin = thinkdsp.read_wave('92002__jcveliz__violin-origional.wav')
