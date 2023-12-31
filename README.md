@@ -9,7 +9,7 @@ Italian translation of [Think DSP](https://github.com/AllenDowney/ThinkDSP) by A
 
 
 ## Tools used:
-* [OmegaT v.4.3.2](https://omegat.org)
+* [OmegaT v.5.7.1](https://omegat.org) - (but with [Okapi Filter: okapiFiltersForOmegaT-1.9-1.41.0](https://okapiframework.org/wiki/index.php/Okapi_Filters_Plugin_for_OmegaT)).
 * [Dillinger](https://dillinger.io) - an online Markdown editor/viewer.
 
 ## ToDo

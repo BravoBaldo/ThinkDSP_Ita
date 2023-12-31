@@ -4,15 +4,12 @@
 % Attribution-NonCommercial-ShareAlike 4.0 International
 % http://creativecommons.org/licenses/by-nc-sa/4.0/
 %
-%\documentclass[12pt]{book} \usepackage[width=5.5in,height=8.5in, hmarginratio=3:2,vmarginratio=1:1]{geometry} 
-\documentclass[12pt,a4paper]{book}
-\usepackage[a4paper, hmarginratio=3:2,vmarginratio=1:1]{geometry} 
+\documentclass[12pt]{book} \usepackage[width=5.5in,height=8.5in, hmarginratio=3:2,vmarginratio=1:1]{geometry} 
 
 \usepackage[T1]{fontenc} 
 
 %\usepackage[latin1]{inputenc}
 \usepackage[utf8]{inputenc} \usepackage[english,italian]{babel} 
-
 % for some of these packages, you might have to install
 % texlive-latex-extra (in Ubuntu)
 %\usepackage[T1]{fontenc}
@@ -26,21 +23,23 @@
 
 % include this so we can compile without hyperref
 % https://tex.stackexchange.com/questions/44088/when-do-i-need-to-invoke-phantomsection
-\providecommand\phantomsection{} 
+\providecommand\phantomsection{}
 
 \title{Think DSP} \author{Allen B. Downey} 
 
-\newcommand{\thetitle}{Think DSP} \newcommand{\thesubtitle}{Digital Signal Processing in Python} \newcommand{\theversion}{1.1.2
+\newcommand{\thetitle}{Think DSP} \newcommand{\thesubtitle}{Digital Signal Processing in Python} \newcommand{\theversion}{1.1.4
 
-(Trad. Ita: 02 febbraio 2021)}
+(Trad. Ita: 29 dicembre 2023)}
+
+
 
 % these styles get translated in CSS for the HTML version
-\newstyle{a:link}{color:black;} \newstyle{p+p}{margin-top:1em;margin-bottom:1em} \newstyle{img}{border:0px} 
+\newstyle{a:link}{color:black;} \newstyle{p+p}{margin-top:1em;margin-bottom:1em} \newstyle{img}{border:0px}
 
 % change the arrows in the HTML version
 \setlinkstext
 
-{\imgsrc[alt="Previous"]{back.png}} {\imgsrc[alt="Up"]{up.png}} {\imgsrc[alt="Next"]{next.png}} 
+{\imgsrc[alt="Previous"]{back.png}} {\imgsrc[alt="Up"]{up.png}} {\imgsrc[alt="Next"]{next.png}}
 
 \makeindex
 
@@ -54,22 +53,22 @@
 
 \usepackage{localdef} \maketitle
 
-\newcount\anchorcnt \newcommand*{\Anchor}[1]{ \@bsphack \Hy@GlobalStepCount\anchorcnt \edef\@currentHref{anchor.\the\anchorcnt} \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend} \M@gettitle{}\label{#1} \@esphack } 
+\newcount\anchorcnt \newcommand*{\Anchor}[1]{ \@bsphack \Hy@GlobalStepCount\anchorcnt \edef\@currentHref{anchor.\the\anchorcnt} \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend} \M@gettitle{}\label{#1} \@esphack }
 
-%%%% % % %
+%%%%%%%
 \else
 
 %%% EXERCISE
-\newtheoremstyle{exercise} {\topsep} {\topsep} {} {} {\bfseries} {} { } {} 
+\newtheoremstyle{exercise} {\topsep} {\topsep} {} {} {\bfseries} {} { } {}
 
 % name of the style to be used% measure of space to leave above the theorem. E.g.: 3pt% measure of space to leave below the theorem. E.g.: 3pt% name of font to use in the body of the theorem% measure of space to indent% name of head font% punctuation between head and body% space after theorem head; " " = normal interword space% Manually specify head
 \theoremstyle{exercise} \newtheorem{exercise}{Esercizio}[chapter]
 
-\input{latexonly} 
+\input{latexonly}
 
 \begin{latexonly} 
 
-\renewcommand{\topfraction}{0.9} \renewcommand{\blankpage}{\thispagestyle{empty} \quad \newpage} 
+\renewcommand{\topfraction}{0.9} \renewcommand{\blankpage}{\thispagestyle{empty} \quad \newpage}
 
 % TITLE PAGES FOR LATEX VERSION
 %-half title--------------------------------------------------
@@ -107,15 +106,17 @@ Versione \theversion
 
 \vspace{1in} 
 
-{\Large Allen B. Downey\\ } 
+{\Large Allen B. Downey\\ }
 
 \vspace{0.5in} 
 
-{\Large Green Tea Press} 
+{\Large Green Tea Press}
 
 {\small Needham, Massachusetts}
 
 Traduzione italiana: Baldassarre Cesarano
+
+
 
 \vfill
 
@@ -126,11 +127,15 @@ Traduzione italiana: Baldassarre Cesarano
 
 \thispagestyle{empty} 
 
-Copyright \copyright ~2014 Allen B. Downey. 
+Copyright \copyright ~2014 Allen B. Downey.
 
 \vspace{0.2in} 
 
-\begin{flushleft} Green Tea Press \\ 9 Washburn Ave \\ Needham MA 02492 \end{flushleft} 
+\begin{flushleft} Green Tea Press \\ 9 Washburn Ave \\ {Needham, Massachusetts}
+
+Traduzione italiana: Baldassarre Cesarano
+
+Needham MA 02492 \end{flushleft} 
 
 È concesso il permesso di copiare, distribuire e/o modificare questo documento in base ai termini della Licenza Internazionale Creative Commons Attribuzione-Non Commerciale-Condividi allo stesso modo 4.0, disponibile al link \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}.
 
@@ -144,15 +149,15 @@ Il sorgente \LaTeX\ per questo libro è disponibile su \url{http://think-dsp.com
 \begin{htmlonly} 
 
 % TITLE PAGE FOR HTML VERSION
-{\Large \thetitle: \thesubtitle} 
+{\Large \thetitle: \thesubtitle}
 
-{\large Allen B. Downey} 
+{\large Allen B. Downey}
 
 Versione \theversion
 
 \vspace{0.25in} 
 
-Copyright 2014 Allen B. Downey 
+Copyright 2014 Allen B. Downey
 
 \vspace{0.25in} 
 
@@ -259,7 +264,7 @@ Buona fortuna e buon divertimento!
 
 \section*{Elenco dei contributori} 
 
-Per qualsiasi suggerimento o correzione, inviare un'email a {\tt downey@allendowney.com}.  [Per la traduzione italiana: baldassarre.cesarano AT libero.it]. Se apporto una modifica in base al tuo feedback, ti aggiungerò nell'elenco dei contributori (a meno che tu non chieda di essere omesso). \index{contributori} 
+Per qualsiasi suggerimento o correzione, inviare un'email a {\tt downey@allendowney.com}. [Per la traduzione italiana: baldassarre.cesarano AT libero.it]. Se apporto una modifica in base al tuo feedback, ti aggiungerò nell'elenco dei contributori (a meno che tu non chieda di essere omesso). \index{contributori} 
 
 Se si include almeno una parte della frase in cui compare l'errore, è facile per me cercare. Anche i numeri di pagina e di sezione vanno bene, ma non ci si lavora altrettanto facilmente. Grazie!
 
@@ -395,7 +400,7 @@ Gli altri picchi nello spettro sono alle frequenze 880, 1320, 1760 e 2200, che s
 
 \item 880 è la frequenza di A5 (LA5), un'ottava più alta della fondamentale. Un'{\bf ottava} è un raddoppio della frequenza.
 
-\item 1320 è approssimativamente E6 (MI6), che è una quinta maggiore sopra A5. Se non si ha familiarità con gli intervalli musicali come la "quinta maggiore", vedere \url{https://en.wikipedia.org/wiki/Interval_(music)}.
+\item 1320 è approssimativamente E6 (MI6), che è una quinta perfetta sopra A5. Se non si ha familiarità con gli intervalli musicali come la "quinta perfetta", vedere \url{https://en.wikipedia.org/wiki/Interval_(music)}.
 
 \item 1760 è A6, due ottave sopra la fondamentale.
 
@@ -509,7 +514,7 @@ Utilizza {\tt aplay} per default, ma si può fornire il nome di un altro player.
     spectrum = wave.make_spectrum()
  \end{verbatim} 
 
-E {\tt Spectrum} fornisce  {\tt plot}:
+E {\tt Spectrum} fornisce {\tt plot}:
 
 \begin{verbatim} 
     spectrum.plot()
@@ -1856,7 +1861,7 @@ def plot_shifted(wave, offset=0.001, start=0.2):
     segment2.plot(linewidth=2, alpha=0.4)
 
     corr = segment1.corr(segment2)
-    text = r'$\rho =$ %.2g' % corr
+    text = r'$\rho =$ \%.2g' \% corr        //Errorissimo: rimuovere i backslash
     plt.text(segment1.start+0.0005, -0.8, text)
     plt.xlabel('Time (s)')
  \end{verbatim} 
@@ -2032,7 +2037,7 @@ Possiamo testare questa funzione in questo modo:
 
     ts = np.linspace(0, 1, framerate)
     ys = synthesize1(amps, fs, ts)
-    wave = thinkdsp.Wave(ys, framerate)
+    wave = thinkdsp.Wave(ys, ts, framerate)
  \end{verbatim} 
 
 Questo esempio crea un segnale che contiene una frequenza fondamentale a 100 Hz e tre armoniche (100 Hz è un G2 [SOL2] acuto). Rende il segnale per un secondo a 11,025 frame al secondo e inserisce i risultati in un oggetto Wave.
@@ -2075,7 +2080,7 @@ Il risultato del prodotto scalare, {\tt ys}, è un vettore con un elemento per o
 \[ e = 0.6 a + 0.25 b + 0.1 c + 0.05 d \] 
 
 %
-E allo stesso modo con gli altri elementi di {\tt ys}. Quindi ogni elemento di {\tt y} è la somma di quattro componenti di frequenza, valutate in un determinato momento e moltiplicate per le ampiezze corrispondenti. Ed è esattamente quello che volevamo.
+E allo stesso modo con gli altri elementi di {\tt ys}. Quindi ogni elemento di {\tt ys} è la somma di quattro componenti di frequenza, valutate in un determinato momento e moltiplicate per le ampiezze corrispondenti. Ed è esattamente quello che volevamo.
 
 Possiamo usare il codice della sezione precedente per verificare che le due versioni di {\tt synthesize} producono gli stessi risultati.
 
@@ -2186,10 +2191,10 @@ Poiché il frame rate è $N$ campioni per unità di tempo, la frequenza di Nyqui
 Con questi valori di {\tt ts} e {\tt fs}, la matrice, $M$, è:
 
 \begin{verbatim} 
-[[ 1.    1.      1.    1.    ]
- [ 1.    0.707   0.   -0.707 ] 
- [ 1.    0.     -1.   -0.    ]
- [ 1.   -0.707  -0.    0.707 ]]
+[[ 1.     1. 1. 1. ]
+ [ 1.      0.707  0.    -0.707 ] 
+ [ 1.      0.    -1.    -0.    ]
+ [ 1.     -0.707 -0.     0.707 ]]
  \end{verbatim} 
 
 Si riconoscerà 0.707 come un'approssimazione di $\sqrt{2}/2$, che è $\cos \pi/4$. Si noterà anche che questa matrice è {\bf simmetrica}, il che significa che l'elemento in $(j, k)$ è sempre uguale all'elemento in $(k, j)$. Ciò implica che $M$ è la propria trasposizione; cioè, $M^T = M$.
@@ -2197,10 +2202,10 @@ Si riconoscerà 0.707 come un'approssimazione di $\sqrt{2}/2$, che è $\cos \pi/
 Ma purtroppo, $M$ non è ortogonale. Se calcoliamo $M^TM$, otteniamo:
 
 \begin{verbatim} 
-[[ 4.  1.    -0.    1.]
- [ 1.  2.     1.   -0.]
- [-0.  1.     2.    1.]
- [ 1. -0.     1.    2.]]
+[[ 4. 1. -0.      1.]
+ [ 1. 2. 1. -0.]
+ [-0. 1. 2.   1.]
+ [ 1. -0.    1. 2.]]
  \end{verbatim} 
 
 E questa non è la matrice identità.
@@ -2236,10 +2241,10 @@ Con questi valori, $M$ è
 E $M^TM$ è
 
 \begin{verbatim} 
-[[ 2.  0.    0.    0.]
- [ 0.  2.   -0.    0.]
- [ 0. -0.    2.   -0.]
- [ 0.  0.   -0.    2.]]
+[[ 2. 0.    0.    0.]
+ [ 0. 2. -0.    0.]
+ [ 0. -0.    2. -0.]
+ [ 0. 0.    -0.    2.]]
  \end{verbatim} 
 
 Alcuni degli elementi esterni alla diagonale vengono visualizzati come -0, il che significa che la rappresentazione in virgola mobile è un piccolo numero negativo. Questa matrice è molto vicina a $2I$, il che significa che $M$ è quasi ortogonale; è appena fuori di un fattore 2. E per i nostri scopi, va abbastanza bene.
@@ -2466,7 +2471,7 @@ Python usa {\tt j} per rappresentare l'unità immaginaria, anziché {\tt i}. Un 
 
 Quando l'argomento di {\tt np.exp} è immaginario o complesso, il risultato è un numero complesso; in particolare, un {\tt np.complex128}, è rappresentato da due numeri a virgola mobile a 64 bit. In questo esempio, il risultato è {\tt 0.0707+0.997j}.
 
-I numeri complessi hanno gli attributi {\tt real} and {\tt imag}:
+I numeri complessi hanno gli attributi {\tt real} e {\tt imag}:
 
 \begin{verbatim} 
 >>> z.real
@@ -2746,7 +2751,7 @@ Anche in questo caso, il risultato è corretto entro la tolleranza dell'aritmeti
 
 \section{DFT} \label{dftsection} 
 
-Come funzione, {\tt analyze2} sarebbe difficile da usare perché funziona solo se {\tt fs} e {\tt ts} vengono scelti correttamente. Invece, la riscriveremo per prendendo solo {\tt ys} e calcolando {\tt freq} e {\tt ts}.
+Come funzione, {\tt analyze2} sarebbe difficile da usare perché funziona solo se {\tt fs} e {\tt ts} vengono scelti correttamente. Invece, la riscriveremo per prendendo solo {\tt ys} e calcolando {\tt fs} e {\tt ts}.
 
 Per prima cosa, si crea una funzione per calcolare la matrice di sintesi, $M$:
 
@@ -2797,13 +2802,13 @@ Sono uguali, entro l'errore della virgola mobile.
 
 La DFT inversa è quasi la stessa, tranne che non dobbiamo trasporre e coniugare $M$, e {\em ora} dobbiamo dividere per N:
 
-\begin{verbatim} 
-def idft(ys):
-    N = len(ys)
+\begin{verbatim}
+def idft(amps):
+    N = len(amps)
     M = synthesis_matrix(N)
-    amps = M.dot(ys) / N
-    return amps
- \end{verbatim} 
+    ys = M.dot(amps) / N
+    return ys
+\end{verbatim} 
 
 Infine, possiamo confermare che {\tt dft(idft(amps))} produce {\tt amps}.
 
@@ -2862,7 +2867,7 @@ Pertanto, ciascuna somma è la correlazione di $y$ con uno dei segnali nell'arra
 % dft.py
 \centerline{\includegraphics[height=2.5in]{figs/dft3.pdf}} \caption{DFT di un segnale a dente di sega a 500 Hz campionato a 10 kHz.} \label{fig.dft3} \end{figure} 
 
-La classe Spectrum in {\tt thinkdsp} è basata su {\tt np.ftt.rfft}, che calcola la ``DFT reale''; cioè funziona con segnali reali. Ma la DFT presentata in questo capitolo è più generale; funziona con segnali complessi.
+La classe Spectrum in {\tt thinkdsp} è basata su {\tt np.fft.rfft}, che calcola la ``DFT reale''; cioè funziona con segnali reali. Ma la DFT presentata in questo capitolo è più generale; funziona con segnali complessi.
 
 Quindi cosa succede quando applichiamo la ``DFT completa'' a un segnale reale? Diamo un'occhiata a un esempio:
 
@@ -2983,7 +2988,9 @@ Ora possiamo calcolare la media dei primi 11 elementi moltiplicando la finestra 
     sum(prod)
  \end{verbatim} 
 
-{\tt padded} è una versione della finestra con zeri aggiunti alla fine, quindi ha la stessa lunghezza di {\tt segment.ys} {\tt prod} è il prodotto della finestra e dell'array dell'onda.
+{\tt padded} è una versione della finestra con zeri aggiunti alla fine, quindi ha la stessa lunghezza di {\tt segment.ys}.
+
+{<u2> prod} è il prodotto della finestra e dell'array dell'onda.
 
 La somma dei prodotti degli elementi è la media dei primi 11 elementi dell'array. Poiché questi elementi sono tutti -1, la loro media è -1
 
@@ -3014,7 +3021,7 @@ Il risultato è di nuovo -1. Per calcolare la media mobile, ripetiamo questo pro
 
 La Figura~\ref{fig.convolution2} mostra il risultato. La linea grigia è il segnale originale; la linea più scura è il segnale con smoothing. Il segnale con smoothing inizia a salire quando il bordo anteriore della finestra raggiunge la prima transizione e si livella quando la finestra attraversa la transizione. Di conseguenza, le transizioni sono meno brusche e gli angoli meno nitidi. Se si ascolta il segnale con smoothing, suona meno rumoroso e leggermente ovattato.
 
-\section{Convoluzione} \label{convolution} 
+\section{Convolution} \label{convolution} 
 
 L'operazione che abbiamo appena calcolato si chiama {\bf convoluzione}, ed è un'operazione così comune che NumPy fornisce un'implementazione più semplice e veloce di questa versione:
 
@@ -3248,7 +3255,7 @@ corrs = np.correlate(close, close, mode='same')
 
 Con {\tt mode='same'}, il risultato ha la stessa lunghezza di {\tt close}, corrispondente ai ritardi da $-N/2$ to $N/2-1$. La linea grigia nella Figura \ref{fig.convolution9} mostra il risultato. Tranne che a {\tt lag=0}, non ci sono picchi, quindi non vi è alcun comportamento periodico apparente in questo segnale. Tuttavia, la funzione di autocorrelazione diminuisce lentamente, suggerendo che questo segnale assomiglia al rumore rosa, come abbiamo visto nella Sezione~\ref{autopink}.
 
-Per calcolare l'autocorrelazione usando la convoluzione, si devono aggiungere zeri al segnale per raddoppiarne la lunghezza. Questo trucco è necessario perché la FFT si basa sul presupposto che il segnale sia periodico; cioè, che si riavvolge dalla fine all'inizio. Con dati di serie temporali come questo, tale ipotesi non è valida. Con l'aggiunta degli zeri e col taglio dei risultati si rimuovono i valori fasulli.
+Per calcolare l'autocorrelazione usando la convoluzione, dobbiamo aggiungere zeri al segnale per raddoppiarne la lunghezza. Questo trucco è necessario perché la FFT si basa sul presupposto che il segnale sia periodico; cioè, che si riavvolge dalla fine all'inizio. Con dati di serie temporali come questo, tale ipotesi non è valida. Con l'aggiunta degli zeri e col taglio dei risultati si rimuovono i valori fasulli.
 
 Inoltre, ricordarsi che la convoluzione inverte la direzione della finestra. Per annullare questo effetto, invertiamo la direzione della finestra prima di chiamare \verb"fft_convolve", utilizzando {\tt np.flipud}, che capovolge un array NumPy. Il risultato è una vista dell'array, non una copia, quindi questa operazione è veloce.
 
@@ -3286,7 +3293,7 @@ Provarlo per alcuni esempi. Cosa succede alla trasformata di Fourier quando si v
 
 \begin{exercise} Se sono stati eseguiti gli esercizi nel Capitolo~\ref{nonperiodic}, si è visto l'effetto della finestra di Hamming, e di alcune delle altre finestre fornite da NumPy, sulla dispersione spettrale. Possiamo avere un'idea dell'effetto di queste finestre osservando le loro DFT.
 
-Oltre a quella Gaussiana che abbiamo usato in questa finestra, creare una finestra di Hamming con le stesse dimensioni. Completare con degli zeri le finestre e disegnarne le DFT. Quale finestra funge da filtro passa basso migliore? Potrebbe essere utile disegnare la DFT su una scala log-$y$.
+Oltre a quella Gaussiana che abbiamo usato in questo capitolo, creare una finestra di Hamming con le stesse dimensioni. Completare con degli zeri le finestre e disegnarne le DFT. Quale finestra funge da filtro passa basso migliore? Potrebbe essere utile disegnare la DFT su una scala log-$y$.
 
 Sperimentare con alcune finestre diverse e alcune dimensioni diverse. \end{exercise} 
 
@@ -3313,7 +3320,7 @@ names = ['date', 'open', 'high', 'low', 'close', 'volume']
 df = pd.read_csv('fb_1.csv', header=0, names=names)
 ys = df.close.values[::-1]
 close = thinkdsp.Wave(ys, framerate=1)
-spectrum = wave.make_spectrum()
+spectrum = close.make_spectrum()
  \end{verbatim} 
 
 Questo esempio utilizza Pandas per leggere il file CSV; il risultato è un DataFrame, {\tt df}, con colonne per il prezzo di apertura, quello di chiusura, il prezzo massimo e quello minimo. Si selezionano i prezzi di chiusura e si salvano in un oggetto Wave. Il framerate è di 1 campione al giorno.
@@ -3788,12 +3795,12 @@ Questo esempio è in {\tt chap10.ipynb}, nel repository di questo libro; lo si p
 
 Ecco lo sparo:
 
-\begin{verbatim} 
-    response = thinkdsp.read_wave('180961__kleeb__gunshots.wav')
+\begin{verbatim}
+    response = thinkdsp.read_wave('180960__kleeb__gunshots.wav')
     response = response.segment(start=0.26, duration=5.0)
     response.normalize()
     response.plot()
- \end{verbatim} 
+\end{verbatim} 
 
 Si seleziona un segmento a partire da 0.26 secondi per rimuovere il silenzio prima dello sparo. La Figura~\ref{fig.systems6} (a sinistra) mostra la forma d'onda dello sparo. Successivamente calcoliamo la DFT di {\tt response}:
 
@@ -4093,7 +4100,7 @@ Nella Sezione ~\ref{aliasing} abbiamo visto che quando un segnale viene campiona
 
 Questo capitolo esplora l'effetto del campionamento e presenta il Teorema del Campionamento, che spiega l'aliasing e la frequenza di ripiegamento.
 
-Inizieremo esplorando l'effetto della convoluzione con gli impulsi; lo useremo per spiegare la modulazione di ampiezza (AM), che risulta essere utile per comprendere il Teorema del Campionamento.
+Inizieremo esplorando l'effetto della convoluzione con gli impulsi; lo useremo poi per spiegare la modulazione di ampiezza (AM), che risulta essere utile per comprendere il Teorema del Campionamento.
 
 Il codice per questo capitolo si trova in {\tt chap11.ipynb}, nel repository di questo libro (vedere la Sezione~\ref{code}). Lo si può anche visualizzare su \url{http://tinyurl.com/thinkdsp11}.
 
